@@ -339,12 +339,23 @@ a:hover {
   transform: translateY(6px);
   transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
 }
-.has-sub:hover > .subnav,
-.has-sub:focus-within > .subnav,
+/* Avec JavaScript, seul « .is-open » (géré par menu.ts, avec Échap) ouvre un sous-menu. Sans JavaScript,
+   le survol et le focus suffisent. */
+html:not(.js) .has-sub:hover > .subnav,
+html:not(.js) .has-sub:focus-within > .subnav,
 .has-sub.is-open > .subnav {
   visibility: visible;
   opacity: 1;
   transform: none;
+}
+/* Pont invisible entre le lien et le panneau : le pointeur ne « sort » pas du menu en le traversant. */
+@media (min-width: 1081px) {
+  .subnav::before {
+    content: '';
+    position: absolute;
+    inset: -0.45rem 0 auto 0;
+    height: 0.45rem;
+  }
 }
 .subnav a {
   display: block;

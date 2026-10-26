@@ -6,7 +6,7 @@
   "surtitre": "Marchés",
   "sousTitre": "Des solutions d’impression et de décoration pour l’horlogerie",
   "chapo": "Bernardaud Solutions Industrielles met ses compétences en imprimerie sérigraphique, décoration et traitements de surface au service des composants horlogers.",
-  "image": "serigraphie-impression",
+  "image": "serigraphie-decor",
   "blocs": [
     {
       "type": "texte",
@@ -22,13 +22,13 @@
         "Notre imprimerie intégrée accompagne la conception et la production de chromos de haute précision destinés notamment aux cadrans et composants horlogers. Elle permet de développer différents types de décors :"
       ],
       "liste": [
-        "chromos basse température (on-glaze), offrant une large liberté chromatique",
-        "chromos haute température (in-glaze), intégrés à l’émail lors de la cuisson",
+        "chromos basse température ([en]on-glaze[/en]), offrant une large liberté chromatique",
+        "chromos haute température ([en]in-glaze[/en]), intégrés à l’émail lors de la cuisson",
         "décors fins, motifs, index et éléments graphiques",
         "développements spécifiques selon les supports et les contraintes du projet"
       ],
       "paragraphesApres": ["L’accompagnement couvre la mise au point graphique, le développement des décors et leur production en série."],
-      "image": "serigraphie-ecran"
+      "image": "serigraphie-atelier"
     },
     {
       "type": "texte",

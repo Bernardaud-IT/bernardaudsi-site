@@ -13,10 +13,12 @@ interface Props {
   image?: string;
   /** Page exclue des moteurs de recherche (brouillons, erreur 404). */
   noindex?: boolean;
+  /** Faux pour la page d'erreur : elle n'a pas d'adresse propre, donc pas d'adresse canonique. */
+  canonical?: boolean;
   /** Données structurées schema.org de la page. */
   jsonld?: object[];
 }
-const { titre, description, image = '/og-default.jpg', noindex = false, jsonld = [] } = Astro.props;
+const { titre, description, image = '/og-default.jpg', noindex = false, canonical = true, jsonld = [] } = Astro.props;
 
 // Un aperçu de validation (PUBLIC_MODE_APERCU=1 à la construction) n'est jamais indexé par les moteurs de recherche.
 const exclure = noindex || import.meta.env.PUBLIC_MODE_APERCU === '1';
@@ -33,7 +35,7 @@ const enJson = (objet: object) => JSON.stringify(objet).replace(/</g, '\\u003c')
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{titre}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonique} />
+    {canonical && <link rel="canonical" href={canonique} />}
     <meta name="robots" content={exclure ? 'noindex, nofollow' : 'index, follow, max-image-preview:large'} />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="theme-color" content="#0f1b24" />
@@ -45,7 +47,7 @@ const enJson = (objet: object) => JSON.stringify(objet).replace(/</g, '\\u003c')
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:title" content={titre} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonique} />
+    {canonical && <meta property="og:url" content={canonique} />}
     <meta property="og:image" content={imageAbsolue} />
     <meta name="twitter:card" content="summary_large_image" />
 

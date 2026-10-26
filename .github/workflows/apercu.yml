@@ -1,6 +1,7 @@
 # Aperçu de validation du site (GitHub Pages). Lancement MANUEL seulement : onglet Actions > « Aperçu de validation » > Run workflow.
 # Le site obtenu n'est jamais indexé (PUBLIC_MODE_APERCU=1). Voir docs/DEPLOIEMENT.md, option A.
-# Attention : GitHub Pages sur un dépôt privé exige une offre payante ; non testé.
+# ATTENTION : un site GitHub Pages est PUBLIC même si le dépôt est privé (sauf GitHub Enterprise Cloud). N'y publier que du
+# contenu validé et libre de droits ; pour un aperçu confidentiel, utiliser l'option B (sous-domaine OVH protégé). Non testé.
 name: Aperçu de validation
 
 on:

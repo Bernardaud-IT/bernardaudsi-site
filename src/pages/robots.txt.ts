@@ -6,6 +6,6 @@ export const GET: APIRoute = ({ site }) => {
   const apercu = import.meta.env.PUBLIC_MODE_APERCU === '1';
   const corps = apercu
     ? 'User-agent: *\nDisallow: /\n'
-    : `User-agent: *\nAllow: /\n\nSitemap: ${new URL('sitemap-index.xml', site).href}\n`;
+    : `User-agent: *\nAllow: /\n\nSitemap: ${new URL(`${import.meta.env.BASE_URL}sitemap-index.xml`, site).href}\n`;
   return new Response(corps, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 };

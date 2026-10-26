@@ -9,7 +9,8 @@ Version de validation 0.1.0 construite et testée en local (29 pages, contrôle 
 
 ## Fait
 - Projet Astro 7 statique, système de design Sora + Inter auto-hébergées (skill ui-ux-pro-max), menu accessible, version mobile.
-- 29 pages en français d'après les textes de Margaux Ricard et les retours de Charles Bernardaud ; 35 photos triées sur 265, sans photos de clients.
+- 29 pages en français d'après les textes de Margaux Ricard et les retours de Charles Bernardaud ; 27 photos triées sur 265, sans photos de clients ni assiettes.
+- Revue indépendante du 2026-10-26 : 0 point critique ; photos, `.htaccess`, menu, plan du site, SEO et documentation corrigés (voir CHANGELOG 0.1.1).
 - Aucun cookie, aucune ressource tierce ; `public/.htaccess` (CSP stricte, en-têtes, HTTPS) ; `npm run verifier`.
 - Documentation : README, ARCHITECTURE, CONTENUS, SECURITE, DEPLOIEMENT, POINTS-A-VALIDER.
 

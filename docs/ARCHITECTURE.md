@@ -60,7 +60,8 @@ bernardaudsi-site/
 ## Photos
 
 Les originaux (265 médias récupérés par l'API publique de l'ancien site) sont dans `data-migration/wp-uploads/`, **hors Git**.
-`src/content/images.json` liste les 35 photos retenues. `npm run images` les convertit en WebP dans
+`src/content/images.json` liste les 27 photos retenues (8 autres ont été retirées après relecture : texte alternatif faux, assiettes,
+visage en gros plan). `npm run images` les convertit en WebP dans
 `src/assets/photos/` ; `Photo.astro` les affiche avec plusieurs tailles (`srcset`) pour que chaque écran charge la bonne.
 
 ## Variables d'environnement

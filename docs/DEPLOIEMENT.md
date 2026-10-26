@@ -17,10 +17,13 @@ Le dossier `dist/` contient le site complet, `.htaccess` compris (fichier caché
 
 Un aperçu n'est **jamais indexé** (`PUBLIC_MODE_APERCU=1` ajoute `noindex` et un `robots.txt` qui interdit tout).
 
-### Option A : GitHub Pages (workflow `.github/workflows/apercu.yml`, lancement manuel)
+### Option A : GitHub Pages (workflow `.github/workflows/apercu.yml`, lancement manuel) : déconseillée pour ce contenu
 
-- Le dépôt est privé. Publier une page depuis un dépôt privé demande une offre GitHub payante (Team ou supérieure) : **à vérifier pour
-  l'organisation Bernardaud-IT**. Sans cela, utiliser l'option B.
+- **Attention : le dépôt peut être privé, mais le site GitHub Pages est public**, accessible à toute personne qui connaît l'adresse,
+  sauf avec GitHub Enterprise Cloud (seule offre qui permet de restreindre l'accès à un site Pages privé). Un aperçu de validation en
+  ligne diffuserait donc des textes non validés, des brouillons et des photos dont les droits ne sont pas réglés (c'est déjà le cas
+  de la version Codex sur `DTaillemaud/bernardaudsi-preview`). **À vérifier pour l'organisation Bernardaud-IT** avant tout usage ; sinon
+  utiliser l'option B.
 - Le site est alors à `https://<organisation>.github.io/bernardaudsi-site/` : variables `SITE_URL=https://bernardaud-it.github.io`
   et `SITE_BASE=/bernardaudsi-site/` (déjà dans le workflow).
 - Lancer : onglet *Actions* du dépôt, « Aperçu de validation », *Run workflow*. Le workflow n'est pas encore testé sur GitHub ;
@@ -72,7 +75,13 @@ curl -sI https://bernardaudsi.com/page-qui-n-existe-pas/  # 404 avec la page d'e
 - Parcourir les pages principales sur ordinateur et téléphone ; vérifier qu'aucune alerte de contenu bloqué n'apparaît (console du navigateur).
 - Tester l'adresse sur securityheaders.com et sur un outil d'audit d'accessibilité.
 - Déclarer `https://bernardaudsi.com/sitemap-index.xml` dans la Search Console de Google.
-- **HSTS** : après une semaine sans problème, retirer le `#` de la ligne `Strict-Transport-Security` de `public/.htaccess`, reconstruire et redéposer.
+- **HSTS** : après une semaine sans problème, retirer le `#` de la ligne `Strict-Transport-Security` de `public/.htaccess` (durée courte, 1 jour,
+  sans `includeSubDomains`), reconstruire et redéposer. Une semaine plus tard, passer à un an (`max-age=31536000`). Ne pas ajouter
+  `includeSubDomains` sans avoir vérifié HTTPS sur tous les sous-domaines (messagerie, aperçu).
+- **Une seule adresse** : le `.htaccess` redirige `www.bernardaudsi.com` vers `bernardaudsi.com`. Contrôler :
+  `curl -sI https://www.bernardaudsi.com/ | head -3` (doit répondre 301 vers l'adresse sans `www`). Le DNS doit déclarer les deux noms.
+- **`Options -Indexes`** n'est pas dans le fichier (erreur 500 possible selon l'offre). Contrôler qu'un dossier sans page, par exemple
+  `https://bernardaudsi.com/_astro/`, n'affiche pas de liste de fichiers ; sinon ajouter la directive si OVH l'autorise.
 - Rediriger les anciennes adresses WordPress importantes vers les nouvelles (règles `Redirect 301` dans `.htaccess`) : liste à établir à partir de l'ancien plan du site.
 
 ## 4. Mise à jour courante

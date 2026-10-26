@@ -1,4 +1,6 @@
 // @ts-check
+import fs from 'node:fs';
+import path from 'node:path';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
@@ -9,6 +11,23 @@ import sitemap from '@astrojs/sitemap';
 //   SITE_URL  adresse publique de l'aperçu (par défaut : https://bernardaudsi.com)
 //   SITE_BASE dossier de publication (par défaut : /, ex. /bernardaudsi-site/ sur GitHub Pages)
 //   PUBLIC_MODE_APERCU=1  interdit l'indexation (meta robots et robots.txt)
+
+/** Adresses des pages marquées « brouillon » dans src/content/fr : elles sont en noindex, donc absentes du plan du site. */
+function adressesBrouillons(dossier = 'src/content/fr') {
+  const adresses = [];
+  for (const entree of fs.readdirSync(dossier, { withFileTypes: true })) {
+    const chemin = path.join(dossier, entree.name);
+    if (entree.isDirectory()) {
+      adresses.push(...adressesBrouillons(chemin));
+    } else if (entree.name.endsWith('.json')) {
+      const page = JSON.parse(fs.readFileSync(chemin, 'utf8'));
+      if (page.brouillon) adresses.push(`/${page.slug}/`);
+    }
+  }
+  return adresses;
+}
+const brouillons = adressesBrouillons();
+
 export default defineConfig({
   site: process.env.SITE_URL ?? 'https://bernardaudsi.com',
   base: process.env.SITE_BASE ?? '/',
@@ -27,8 +46,8 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      // La page d'erreur 404 n'a pas à figurer dans le plan du site.
-      filter: (page) => !page.includes('/404'),
+      // Ni la page d'erreur 404 ni les brouillons (noindex) : un plan du site ne doit pas contredire le robots.
+      filter: (page) => !page.includes('/404') && !brouillons.some((adresse) => page.endsWith(adresse)),
     }),
   ],
 });

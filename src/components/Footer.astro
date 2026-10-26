@@ -7,6 +7,9 @@ const logo = photo('logo-bsi');
 const annee = new Date().getFullYear();
 const telephoneLien = site.contact.telephone.replace(/\s/g, '');
 const rubriques = site.nav.filter((r) => r.enfants);
+// Téléphone et courriel provisoires : tant qu'ils ne sont pas confirmés, ils ne s'affichent pas dans le pied de page
+// de toutes les pages (la page Contact les montre avec un avertissement).
+const coordonneesConfirmees = !site.contact.aConfirmer;
 ---
 
 <footer class="site-footer on-dark">
@@ -17,8 +20,16 @@ const rubriques = site.nav.filter((r) => r.enfants);
         <p>{site.nom}. {site.accroche}.</p>
         <address class="footer-address">
           {site.contact.adresse.map((ligne) => <span>{ligne}<br /></span>)}
-          <a href={`tel:${telephoneLien}`}>{site.contact.telephone}</a><br />
-          <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+          {
+            coordonneesConfirmees ? (
+              <>
+                <a href={`tel:${telephoneLien}`}>{site.contact.telephone}</a><br />
+                <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+              </>
+            ) : (
+              <a href={lien('/contact/')}>Nous contacter</a>
+            )
+          }
         </address>
       </div>
 

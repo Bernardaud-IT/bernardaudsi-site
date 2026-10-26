@@ -1,7 +1,7 @@
 {
   "slug": "offre/developpements-services-industriels",
   "titre": "Développements et services industriels",
-  "titreSeo": "Développements et services industriels | Bernardaud Solutions Industrielles",
+  "titreSeo": "Services industriels sur mesure | Bernardaud Solutions Industrielles",
   "surtitre": "Offre",
   "description": "Études, prototypage, ajout de fonctions, assemblage et opérations industrielles sur mesure, grâce à un outil industriel polyvalent et à un laboratoire intégré.",
   "chapo": "Mobilisation de nos compétences et de notre outil industriel pour des besoins spécifiques : études, prototypage, ajout de fonctions, assemblage et opérations industrielles sur mesure.",
@@ -12,7 +12,7 @@
       "titre": "Des besoins spécifiques, un outil polyvalent",
       "paragraphes": ["Nous mobilisons nos compétences et notre outil industriel pour :"],
       "liste": ["des études", "du prototypage", "de l’ajout de fonctions", "de l’assemblage", "des opérations industrielles sur mesure"],
-      "image": "prototypage"
+      "image": "calibrage"
     },
     {
       "type": "texte",
@@ -22,7 +22,7 @@
         "Grâce à un laboratoire intégré, un bureau d’études et des ateliers de prototypage, Bernardaud Solutions Industrielles peut intervenir à différents niveaux de maturité d’un projet, depuis les phases de R&D jusqu’à l’industrialisation et la production en grande série.",
         "Ces moyens internes sont complétés, lorsqu’un projet nécessite des expertises ou des équipements spécifiques, par un écosystème de partenaires scientifiques et technologiques."
       ],
-      "image": "equipe-atelier",
+      "image": "deliantage-frittage",
       "imageSens": "gauche"
     },
     {

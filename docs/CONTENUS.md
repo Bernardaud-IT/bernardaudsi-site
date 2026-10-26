@@ -24,7 +24,8 @@ Ouvrir le fichier, repérer la phrase, la modifier **entre les guillemets droits
 
 - ne pas supprimer les guillemets `"`, les virgules `,` ni les accolades `{ }` et crochets `[ ]` ;
 - pour écrire un guillemet droit dans un texte, le précéder d'une barre oblique inverse : `\"` (mieux : utiliser « » et l'apostrophe typographique ’) ;
-- pas de balise HTML dans les textes : ils sont affichés tels quels.
+- pas de balise HTML dans les textes : ils sont affichés tels quels ;
+- pour un mot anglais (lu à part par les lecteurs d'écran), l'entourer de `[en]` et `[/en]` : `chromos basse température ([en]on-glaze[/en])`. Seulement dans les textes affichés (paragraphes, listes, `chapo`), pas dans `description` ni `titreSeo`.
 
 Exemple (`marches/horlogerie.json`) :
 

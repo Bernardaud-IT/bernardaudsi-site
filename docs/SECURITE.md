@@ -11,7 +11,7 @@ base de données, ni formulaire, ni plugin. Un pirate n'a presque aucune prise.
 |---|---|
 | Cookies | **Aucun.** Ni cookie, ni stockage local, ni identifiant. Donc **aucun bandeau de consentement** n'est nécessaire (la page Confidentialité l'explique aux visiteurs). |
 | Mesure d'audience | **Aucune.** Si elle devient nécessaire : un outil sans cookie et auto-hébergé (par exemple Matomo configuré pour l'exemption de consentement de la CNIL), après décision et mise à jour de la page Confidentialité. |
-| Ressources de tiers | **Aucune** : polices, images, scripts, cartes et vidéos viennent du site lui-même. Le contrôle `npm run verifier` échoue si une ressource externe apparaît. |
+| Ressources de tiers | **Aucune** : polices, images, scripts, cartes et vidéos viennent du site lui-même. Le contrôle `npm run verifier` échoue si une ressource externe apparaît dans les pages, les fichiers CSS ou les fichiers JavaScript (détail plus bas, avec ses limites). |
 | JavaScript | Un seul petit fichier (menu mobile). Le site fonctionne sans. |
 | Formulaires | Aucun pour l'instant (coordonnées affichées). Le futur formulaire de contact est décrit dans `POINTS-A-VALIDER.md` : il demandera une revue sécurité dédiée. |
 
@@ -27,19 +27,24 @@ Posés par le serveur Apache d'OVH ; ils protègent les visiteurs même si une f
 | `Referrer-Policy: strict-origin-when-cross-origin` | Limite ce qui est transmis aux sites vers lesquels on clique. |
 | `Permissions-Policy` | Désactive caméra, micro, géolocalisation, paiement, etc. |
 | `Cross-Origin-Opener-Policy` et `Cross-Origin-Resource-Policy` | Isolation du site vis-à-vis des autres sites. |
-| `Strict-Transport-Security` (HSTS) | **Prévu mais commenté** : à activer seulement une fois HTTPS vérifié partout (il est ensuite mémorisé un an). Voir `DEPLOIEMENT.md`. |
-| Redirection HTTPS, `Options -Indexes`, fichiers cachés interdits, `X-Powered-By` retiré | Hygiène du serveur. |
+| `Strict-Transport-Security` (HSTS) | **Prévu mais commenté** : à activer seulement une fois HTTPS vérifié (il est ensuite mémorisé par les navigateurs), d'abord pour 1 jour puis un an, **sans** `includeSubDomains`. Voir `DEPLOIEMENT.md`. |
+| Redirection HTTPS, `www` vers l'adresse sans `www`, fichiers cachés interdits, `X-Powered-By` retiré | Hygiène du serveur. La redirection suit le nom de domaine demandé (l'aperçu sur un sous-domaine reste sur son sous-domaine). |
 
 À valider sur l'hébergement réel : certaines options Apache dépendent de l'offre OVH (module `mod_headers`, balise `<If>`). La
 vérification se fait avec `curl -I https://bernardaudsi.com/` (voir `DEPLOIEMENT.md`) ou sur securityheaders.com.
 
 ## Ce que `npm run verifier` contrôle
 
-- aucune ressource externe (`src`, `href`, `srcset`) hors liens sortants ;
+- aucune ressource externe dans les pages (`src`, `href`, `srcset`, `poster`, `data`, hors liens sortants `<a>` et adresse canonique) ;
+- aucun `@import` ni `url()` externe dans les fichiers CSS, aucune adresse `http(s)` dans les fichiers JavaScript (hors espaces de noms XML du W3C) ;
+- aucune balise `iframe`, `object`, `embed`, `video`, `audio`, `form` ni redirection `<meta refresh>` (chacune demande une revue sécurité) ;
 - aucun `<script>` ni `<style>` ni attribut `style` ni gestionnaire d'événement en ligne (la CSP les interdirait) ;
 - tous les liens et fichiers internes existent ;
-- chaque page a un titre, une description, une langue, une adresse canonique et un seul `h1` ;
-- toutes les images ont un attribut `alt` ; les niveaux de titres ne sautent pas.
+- chaque page a un titre (70 caractères au plus, sinon avertissement), une description (160 au plus), une langue, une adresse canonique (sauf la 404) et un seul `h1` ;
+- toutes les images ont un attribut `alt` ; les niveaux de titres ne sautent pas ; aucun balisage `[en]` n'est resté dans un texte.
+
+**Ce que ce contrôle ne couvre pas** : le comportement réel de l'hébergeur (en-têtes, redirections), les adresses déclarées dans les balises
+`<meta>` (Open Graph, par exemple), les lecteurs d'écran, le rendu des polices. Ces points se vérifient à la mise en ligne (`DEPLOIEMENT.md`).
 
 ## Accessibilité
 

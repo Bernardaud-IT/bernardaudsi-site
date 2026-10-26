@@ -1,6 +1,7 @@
 ---
 import Breadcrumb from './Breadcrumb.astro';
 import Photo from './Photo.astro';
+import Rich from './Rich.astro';
 import { filAriane, type Page } from '../lib/site';
 
 interface Props {
@@ -17,7 +18,7 @@ const fil = filAriane(page.slug);
       {page.surtitre && <p class="eyebrow">{page.surtitre}</p>}
       <h1>{page.titre}</h1>
       {page.sousTitre && <p class="page-subtitle">{page.sousTitre}</p>}
-      {page.chapo && <p class="page-chapo">{page.chapo}</p>}
+      {page.chapo && <p class="page-chapo"><Rich texte={page.chapo} /></p>}
     </div>
     {
       page.image && (

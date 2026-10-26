@@ -5,7 +5,7 @@ import Section from '../components/Section.astro';
 import { lien, site } from '../lib/site';
 ---
 
-<Base titre={`Page introuvable | ${site.nom}`} description="Cette page n'existe pas ou a été déplacée." noindex>
+<Base titre={`Page introuvable | ${site.nom}`} description="Cette page n'existe pas ou a été déplacée." noindex canonical={false}>
   <section class="page-hero on-dark">
     <div class="container page-hero-grid">
       <div>

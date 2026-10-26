@@ -1,5 +1,7 @@
 ---
 // Corps d'un bloc de texte : paragraphes, liste à puces, paragraphes de conclusion.
+import Rich from '../Rich.astro';
+
 interface Props {
   paragraphes?: string[];
   liste?: string[];
@@ -9,12 +11,12 @@ interface Props {
 const { paragraphes = [], liste, colonnes, paragraphesApres = [] } = Astro.props;
 ---
 
-{paragraphes.map((p) => <p>{p}</p>)}
+{paragraphes.map((p) => <p><Rich texte={p} /></p>)}
 {
   liste && (
     <ul class:list={['checklist', colonnes && 'checklist--cols']} role="list">
-      {liste.map((item) => <li>{item}</li>)}
+      {liste.map((item) => <li><Rich texte={item} /></li>)}
     </ul>
   )
 }
-{paragraphesApres.map((p) => <p>{p}</p>)}
+{paragraphesApres.map((p) => <p><Rich texte={p} /></p>)}

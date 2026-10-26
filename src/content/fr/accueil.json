@@ -30,7 +30,7 @@
           "titre": "Imprimerie sérigraphique",
           "texte": "Impression sérigraphique sur une grande diversité de supports, pour des applications industrielles et décoratives.",
           "href": "/offre/imprimerie-serigraphique/",
-          "image": "serigraphie-impression"
+          "image": "serigraphie-decor"
         },
         {
           "titre": "Décoration et traitements de surface",
@@ -42,7 +42,7 @@
           "titre": "Développements et services industriels",
           "texte": "Études, prototypage, ajout de fonctions, assemblage et opérations industrielles spécifiques, grâce à un outil industriel polyvalent.",
           "href": "/offre/developpements-services-industriels/",
-          "image": "operateur-poste"
+          "image": "atelier-production"
         }
       ]
     },

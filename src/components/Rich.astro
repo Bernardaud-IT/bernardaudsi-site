@@ -1,0 +1,12 @@
+---
+// Affiche un texte de contenu en marquant les mots anglais : « [en]on-glaze[/en] » devient <span lang="en">.
+// Les lecteurs d'écran changent alors de prononciation (RGAA 8.7, WCAG 3.1.2). Aucun autre balisage n'est accepté :
+// le texte reste du texte, jamais du HTML.
+interface Props {
+  texte: string;
+}
+const { texte } = Astro.props;
+const morceaux = texte.split(/(\[en\].*?\[\/en\])/);
+---
+
+{morceaux.map((morceau) => (morceau.startsWith('[en]') ? <span lang="en">{morceau.slice(4, -5)}</span> : morceau))}
