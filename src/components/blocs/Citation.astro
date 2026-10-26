@@ -1,0 +1,26 @@
+---
+import Photo from '../Photo.astro';
+import Section from '../Section.astro';
+
+interface Props {
+  texte: string;
+  auteur: string;
+  fonction?: string;
+  image?: string;
+  fond?: 'alt' | 'sombre';
+}
+const { texte, auteur, fonction, image, fond } = Astro.props;
+---
+
+<Section fond={fond}>
+  <figure class="quote reveal">
+    {image && <Photo nom={image} sizes="160px" />}
+    <blockquote>
+      <p>«&nbsp;{texte}&nbsp;»</p>
+      <footer>
+        <strong>{auteur}</strong>
+        {fonction}
+      </footer>
+    </blockquote>
+  </figure>
+</Section>

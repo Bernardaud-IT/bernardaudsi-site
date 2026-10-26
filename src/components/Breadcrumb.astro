@@ -1,0 +1,20 @@
+---
+import { lien } from '../lib/site';
+
+interface Props {
+  fil: { libelle: string; href: string }[];
+}
+const { fil } = Astro.props;
+---
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <ol>
+    {
+      fil.map((etape, i) => (
+        <li>
+          {i < fil.length - 1 ? <a href={lien(etape.href)}>{etape.libelle}</a> : <span aria-current="page">{etape.libelle}</span>}
+        </li>
+      ))
+    }
+  </ol>
+</nav>

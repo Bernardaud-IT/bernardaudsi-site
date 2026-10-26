@@ -1,0 +1,21 @@
+{
+  "slug": "marches",
+  "titre": "Marchés",
+  "titreSeo": "Marchés servis | Bernardaud Solutions Industrielles",
+  "description": "Défense, industrie, horlogerie, cosmétiques, parfums, vins et spiritueux, architecture : les marchés servis par Bernardaud Solutions Industrielles.",
+  "chapo": "Des compétences, des technologies et des moyens de production au service de marchés et d’applications variés.",
+  "blocs": [
+    {
+      "type": "cartes",
+      "style": "piliers",
+      "cartes": [
+        { "titre": "Défense", "texte": "Céramiques balistiques haute performance", "href": "/marches/defense/", "image": "casques-balistique" },
+        { "titre": "Industrie", "texte": "Céramiques techniques et traitements de surface pour l’industrie", "href": "/marches/industrie/", "image": "four-chariot" },
+        { "titre": "Horlogerie", "texte": "Des solutions d’impression et de décoration pour l’horlogerie", "href": "/marches/horlogerie/", "image": "serigraphie-decor" },
+        { "titre": "Cosmétiques, parfums, vins et spiritueux", "texte": "Des contenants d’exception", "href": "/marches/cosmetiques-parfums-vins-spiritueux/", "image": "manufacture-2025" },
+        { "titre": "Architecture", "texte": "La porcelaine au service de l’architecture", "href": "/marches/architecture/", "image": "dessin-manufacture" }
+      ]
+    },
+    { "type": "cta", "titre": "Parlons de votre projet", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

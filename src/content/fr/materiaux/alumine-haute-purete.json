@@ -1,0 +1,43 @@
+{
+  "slug": "materiaux/alumine-haute-purete",
+  "titre": "Alumine haute pureté",
+  "titreSeo": "Alumine haute pureté | Bernardaud Solutions Industrielles",
+  "description": "Alumine Al₂O₃ haute pureté (> 98 %) : grande dureté, stabilité thermique, excellentes propriétés diélectriques, résistance à l’usure et à la chimie.",
+  "surtitre": "Matériaux",
+  "sousTitre": "Alumine Al₂O₃ – supérieure à 98 %",
+  "chapo": "L’alumine haute pureté se caractérise par une grande dureté, une bonne stabilité thermique, d’excellentes propriétés diélectriques ainsi qu’une forte résistance à l’usure et aux environnements chimiques exigeants.",
+  "image": "composants-ceramiques",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "Elle est particulièrement adaptée aux applications nécessitant un niveau élevé de précision, de résistance mécanique, d’isolation électrique ou de durabilité."
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Applications industrielles",
+      "liste": [
+        "Composants pour l’électronique et les semi-conducteurs",
+        "Isolateurs et supports électriques",
+        "Pièces d’usure",
+        "Composants de pompes et de vannes",
+        "Tubes et équipements de laboratoire",
+        "Applications médicales selon les nuances",
+        "Protection balistique pour certaines formulations"
+      ],
+      "colonnes": true
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "titre": "Voir aussi",
+      "cartes": [
+        { "titre": "ZTA", "texte": "Alumine renforcée à la zircone – Al₂O₃ + ZrO₂", "href": "/materiaux/zta/" },
+        { "titre": "Défense", "texte": "Céramiques balistiques haute performance", "href": "/marches/defense/" }
+      ]
+    },
+    { "type": "cta", "titre": "Un composant en alumine haute pureté ?", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

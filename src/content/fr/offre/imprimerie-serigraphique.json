@@ -1,0 +1,54 @@
+{
+  "slug": "offre/imprimerie-serigraphique",
+  "titre": "Imprimerie sérigraphique",
+  "titreSeo": "Imprimerie sérigraphique | Bernardaud Solutions Industrielles",
+  "surtitre": "Offre",
+  "description": "Conception et impression sérigraphique sur une grande diversité de supports, pour des applications industrielles et décoratives, à Limoges.",
+  "chapo": "Conception et impression sérigraphique sur une grande diversité de supports, pour des applications industrielles et décoratives.",
+  "image": "serigraphie-impression",
+  "blocs": [
+    {
+      "type": "texte",
+      "titre": "Limoges, le site d’imprimerie sérigraphique",
+      "paragraphes": [
+        "Le site d’imprimerie concentre les équipements et compétences nécessaires à la réalisation de décors et impressions sérigraphiques sur une grande diversité de supports :"
+      ],
+      "liste": [
+        "préparation et mise au point des impressions",
+        "production en petites et grandes séries",
+        "adaptation aux contraintes techniques et esthétiques des différents supports et applications"
+      ],
+      "image": "serigraphie-ecran"
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Des chromos de haute précision",
+      "paragraphes": [
+        "Notre imprimerie intégrée accompagne la conception et la production de chromos de haute précision destinés notamment aux cadrans et composants horlogers. Elle permet de développer différents types de décors :"
+      ],
+      "liste": [
+        "chromos basse température (on-glaze), offrant une large liberté chromatique",
+        "chromos haute température (in-glaze), intégrés à l’émail lors de la cuisson",
+        "décors fins, motifs, index et éléments graphiques",
+        "développements spécifiques selon les supports et les contraintes du projet"
+      ],
+      "paragraphesApres": ["L’accompagnement couvre la mise au point graphique, le développement des décors et leur production en série."],
+      "image": "serigraphie-atelier",
+      "imageSens": "gauche"
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "titre": "Marché concerné",
+      "cartes": [
+        { "titre": "Horlogerie", "texte": "Des solutions d’impression et de décoration pour l’horlogerie", "href": "/marches/horlogerie/" }
+      ]
+    },
+    {
+      "type": "cta",
+      "titre": "Un décor ou une impression à développer ?",
+      "bouton": { "libelle": "Contactez-nous", "href": "/contact/" }
+    }
+  ]
+}

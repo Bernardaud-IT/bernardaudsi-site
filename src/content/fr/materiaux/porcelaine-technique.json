@@ -1,0 +1,38 @@
+{
+  "slug": "materiaux/porcelaine-technique",
+  "titre": "Porcelaine technique",
+  "titreSeo": "Porcelaine technique | Bernardaud Solutions Industrielles",
+  "description": "La porcelaine technique, céramique silicatée, combine isolation électrique, résistance mécanique et maîtrise des coûts. Applications industrielles.",
+  "surtitre": "Matériaux",
+  "chapo": "La porcelaine technique appartient à la famille des céramiques silicatées. Sa composition associe une phase vitreuse et des phases cristallines qui lui permettent de combiner isolation électrique, résistance mécanique et maîtrise des coûts.",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "Elle constitue une solution particulièrement adaptée lorsque l’application recherche un équilibre entre performances techniques, aptitude à la production en série et compétitivité économique."
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Applications industrielles",
+      "liste": [
+        "Isolateurs et composants électriques",
+        "Pièces techniques pour équipements industriels",
+        "Supports et composants nécessitant une bonne isolation électrique",
+        "Applications industrielles recherchant un bon rapport performance/coût"
+      ],
+      "colonnes": true
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "titre": "Voir aussi",
+      "cartes": [
+        { "titre": "Alumine de pureté intermédiaire", "texte": "Alumine Al₂O₃ – 90 à 96 %", "href": "/materiaux/alumine-purete-intermediaire/" },
+        { "titre": "Tous les matériaux", "href": "/materiaux/" }
+      ]
+    },
+    { "type": "cta", "titre": "Un composant en porcelaine technique ?", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

@@ -1,0 +1,31 @@
+---
+import Section from '../Section.astro';
+
+interface Props {
+  /** Sections de texte juridique. Un texte entre crochets, « [à compléter : …] », est mis en évidence. */
+  sections: { titre: string; paragraphes: string[] }[];
+}
+const { sections } = Astro.props;
+
+// Découpe « avant [à compléter : x] après » en trois morceaux pour mettre le crochet en évidence.
+const decouper = (texte: string) => texte.split(/(\[à compléter[^\]]*\])/i);
+---
+
+<Section>
+  <div class="prose legal">
+    {
+      sections.map((section) => (
+        <>
+          <h2>{section.titre}</h2>
+          {section.paragraphes.map((p) => (
+            <p>
+              {decouper(p).map((morceau) =>
+                morceau.startsWith('[') ? <span class="todo">{morceau}</span> : morceau,
+              )}
+            </p>
+          ))}
+        </>
+      ))
+    }
+  </div>
+</Section>

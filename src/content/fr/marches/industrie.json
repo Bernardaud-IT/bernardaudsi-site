@@ -1,0 +1,42 @@
+{
+  "slug": "marches/industrie",
+  "titre": "Industrie",
+  "titreSeo": "Céramiques pour l’industrie | Bernardaud Solutions Industrielles",
+  "description": "Céramiques techniques et traitements de surface (PVD) face aux contraintes mécaniques, thermiques, chimiques ou électriques : usure, corrosion, hautes températures, isolation.",
+  "surtitre": "Marchés",
+  "sousTitre": "Céramiques techniques et traitements de surface pour l’industrie",
+  "chapo": "Dans de nombreux environnements industriels, les composants sont soumis à des contraintes mécaniques, thermiques, chimiques ou électriques importantes.",
+  "image": "four-chariot",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "Les céramiques techniques et les traitements de surface, notamment par PVD, permettent d’apporter des réponses adaptées à ces contraintes, en fonction des conditions d’utilisation et du cahier des charges.",
+        "Leurs propriétés trouvent des applications dans des secteurs très variés : équipements industriels, énergie, électronique, aéronautique, instrumentation, procédés thermiques ou encore environnements soumis à l’usure et à la corrosion."
+      ]
+    },
+    {
+      "type": "groupes",
+      "fond": "alt",
+      "titre": "Applications",
+      "groupes": [
+        { "titre": "Stabilité dimensionnelle", "items": ["Pièces de structure", "Inserts", "Renforts", "Composants de précision"] },
+        { "titre": "Dureté et résistance à l’usure", "items": ["Buses", "Guides", "Protections", "Pièces de friction"] },
+        { "titre": "Résistance chimique", "items": ["Corps de pompes et mélangeurs", "Équipements de laboratoire", "Vannes", "Composants en contact avec des fluides corrosifs"] },
+        { "titre": "Isolation électrique", "items": ["Substrats", "Isolateurs", "Supports électriques"] },
+        { "titre": "Applications à hautes températures", "items": ["Supports de cuisson", "Protections thermiques", "Composants de fours"] },
+        { "titre": "Traitements de surface et PVD", "items": ["Protection contre l’usure", "Réduction du frottement", "Fonctionnalisation des surfaces", "Finitions esthétiques"] }
+      ]
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "titre": "Pour aller plus loin",
+      "cartes": [
+        { "titre": "Matériaux", "texte": "Porcelaine technique, alumine, ZTA, zircone", "href": "/materiaux/" },
+        { "titre": "Décoration et traitements de surface", "texte": "PVD, texturation, coloration de la matière", "href": "/offre/decoration-traitements-de-surface/" }
+      ]
+    },
+    { "type": "cta", "titre": "Une contrainte à résoudre ?", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

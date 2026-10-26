@@ -1,0 +1,6 @@
+# Fins de ligne : toujours LF, quel que soit le poste (un .htaccess ou un script en CRLF peut mal se comporter sur Apache ou Linux).
+* text=auto eol=lf
+*.webp binary
+*.jpg binary
+*.png binary
+*.woff2 binary

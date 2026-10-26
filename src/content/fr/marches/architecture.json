@@ -1,0 +1,37 @@
+{
+  "slug": "marches/architecture",
+  "titre": "Architecture",
+  "titreSeo": "Porcelaine pour l’architecture | Bernardaud Solutions Industrielles",
+  "description": "Éléments architecturaux en porcelaine conçus pour chaque projet : façades, architecture intérieure, volumes et formes spécifiques, de la conception à la réalisation.",
+  "surtitre": "Marchés",
+  "sousTitre": "La porcelaine au service de l’architecture",
+  "chapo": "Depuis 1863, Bernardaud développe à Limoges une connaissance approfondie de la porcelaine, de la couleur et du décor. Cette expérience est mise au service des architectes, designers et maîtres d’œuvre pour imaginer des éléments architecturaux singuliers, conçus spécifiquement pour chaque projet.",
+  "image": "dessin-manufacture",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "La porcelaine offre une grande liberté de création par la richesse de ses formes, reliefs, textures, couleurs et finitions. Elle peut ainsi devenir un véritable élément d’expression architecturale, en façade comme dans les espaces intérieurs.",
+        "Bernardaud Solutions Industrielles accompagne les projets depuis leur conception jusqu’à leur réalisation, avec la capacité de développer des pièces sur mesure et de répondre aux contraintes dimensionnelles, mécaniques, environnementales et de mise en œuvre propres à l’architecture."
+      ]
+    },
+    {
+      "type": "groupes",
+      "fond": "alt",
+      "titre": "Applications",
+      "groupes": [
+        { "titre": "Façades et enveloppes architecturales", "items": ["Éléments de parement", "Reliefs et textures", "Motifs et compositions sur mesure", "Couleurs et finitions spécifiques"] },
+        { "titre": "Architecture intérieure", "items": ["Habillages muraux", "Éléments décoratifs", "Panneaux et compositions", "Pièces sur mesure"] },
+        {
+          "titre": "Éléments architecturaux",
+          "items": ["Volumes et formes spécifiques", "Pièces répétitives ou uniques", "Reliefs et éléments sculpturaux", "Intégration à des structures ou ensembles existants"]
+        },
+        {
+          "titre": "Projets sur mesure",
+          "items": ["Développement spécifique selon l’intention de l’architecte", "Recherche de formes, textures et couleurs", "Prototypage et mise au point", "Production adaptée à l’échelle du projet"]
+        }
+      ]
+    },
+    { "type": "cta", "titre": "Un projet architectural ?", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

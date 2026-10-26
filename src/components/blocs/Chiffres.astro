@@ -1,0 +1,29 @@
+---
+import Section from '../Section.astro';
+
+interface Props {
+  /** Faux : le bloc n'est pas affiché. Les chiffres clés attendent l'arbitrage de la direction. */
+  visible?: boolean;
+  titre?: string;
+  items: { valeur: string; libelle: string }[];
+}
+const { visible = true, titre, items } = Astro.props;
+---
+
+{
+  visible && (
+    <Section fond="sombre">
+      {titre && <h2 class="visually-hidden">{titre}</h2>}
+      <ul class="stats reveal" role="list">
+        {
+          items.map((item) => (
+            <li>
+              <span class="stat-value">{item.valeur}</span>
+              <span class="stat-label">{item.libelle}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </Section>
+  )
+}

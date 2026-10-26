@@ -1,0 +1,37 @@
+{
+  "slug": "confidentialite",
+  "titre": "Confidentialité",
+  "titreSeo": "Politique de confidentialité | Bernardaud Solutions Industrielles",
+  "description": "Politique de confidentialité du site de Bernardaud Solutions Industrielles : aucun cookie, aucune mesure d’audience, données traitées uniquement pour répondre à vos demandes.",
+  "brouillon": true,
+  "blocs": [
+    {
+      "type": "legal",
+      "sections": [
+        {
+          "titre": "En bref",
+          "paragraphes": [
+            "Ce site ne dépose aucun cookie, n’utilise aucun traceur, aucun outil de mesure d’audience et ne charge aucune ressource d’un service tiers (polices, cartes, vidéos, scripts). Aucun bandeau de consentement n’est donc nécessaire."
+          ]
+        },
+        {
+          "titre": "Responsable du traitement",
+          "paragraphes": ["[à compléter : raison sociale et adresse de l’entité responsable, coordonnées du délégué à la protection des données ou du contact RGPD]."]
+        },
+        {
+          "titre": "Données traitées",
+          "paragraphes": [
+            "Journaux techniques de l’hébergeur : lors de la consultation du site, le serveur enregistre automatiquement l’adresse IP, la date et l’heure, la page demandée. Ces journaux servent à la sécurité et au bon fonctionnement du site ; leur durée de conservation est fixée par l’hébergeur [à compléter : durée à vérifier].",
+            "Messages adressés à BSI : si vous nous écrivez, nous utilisons les informations transmises (nom, coordonnées, contenu du message) uniquement pour répondre à votre demande et en assurer le suivi. Base légale : l’intérêt légitime de répondre aux sollicitations professionnelles. Durée de conservation : [à compléter]."
+          ]
+        },
+        {
+          "titre": "Vos droits",
+          "paragraphes": [
+            "Vous disposez d’un droit d’accès, de rectification, d’effacement, d’opposition et de limitation du traitement de vos données. Pour les exercer, écrivez à [à compléter : adresse de contact RGPD]. En cas de difficulté, vous pouvez saisir la CNIL (cnil.fr)."
+          ]
+        }
+      ]
+    }
+  ]
+}

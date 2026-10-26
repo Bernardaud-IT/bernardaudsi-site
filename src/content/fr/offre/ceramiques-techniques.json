@@ -1,0 +1,52 @@
+{
+  "slug": "offre/ceramiques-techniques",
+  "titre": "Céramiques techniques",
+  "titreSeo": "Céramiques techniques sur mesure | Bernardaud Solutions Industrielles",
+  "surtitre": "Offre",
+  "description": "Développement et production de composants en céramiques techniques, sur catalogue ou sur mesure, de la petite à la grande série, à Oradour-sur-Glane en Haute-Vienne.",
+  "chapo": "Développement et production de composants en céramiques techniques, sur catalogue ou sur mesure, de la petite à la grande série.",
+  "image": "composants-ceramiques",
+  "blocs": [
+    {
+      "type": "texte",
+      "titre": "Oradour-sur-Glane, le site des céramiques techniques",
+      "paragraphes": ["Le site réunit les moyens dédiés au développement et à la production de composants en céramiques techniques :"],
+      "liste": [
+        "plusieurs procédés de mise en forme : pressage, injection, coulage sous pression, calibrage",
+        "capacités de déliantage et de frittage adaptées à différents matériaux, géométries et volumes",
+        "un parc de 24 fours de grande capacité",
+        "des moyens permettant d’accompagner la production, du prototype à la grande série"
+      ],
+      "image": "four-chariot"
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "fond": "alt",
+      "titre": "Des matériaux adaptés à chaque contrainte",
+      "intro": "Le choix du matériau dépend des conditions d’utilisation, des sollicitations mécaniques, thermiques, chimiques ou électriques, mais aussi des contraintes de mise en forme, de production et de coût.",
+      "cartes": [
+        { "titre": "Porcelaine technique", "texte": "Isolation électrique, résistance mécanique et maîtrise des coûts.", "href": "/materiaux/porcelaine-technique/" },
+        { "titre": "Alumine de pureté intermédiaire", "texte": "Alumine Al₂O₃ – 90 à 96 %", "href": "/materiaux/alumine-purete-intermediaire/" },
+        { "titre": "Alumine haute pureté", "texte": "Alumine Al₂O₃ – supérieure à 98 %", "href": "/materiaux/alumine-haute-purete/" },
+        { "titre": "ZTA", "texte": "Alumine renforcée à la zircone – Al₂O₃ + ZrO₂", "href": "/materiaux/zta/" },
+        { "titre": "Zircone", "texte": "Zircone ZrO₂", "href": "/materiaux/zircone/" }
+      ]
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "titre": "Marchés concernés",
+      "cartes": [
+        { "titre": "Défense", "texte": "Céramiques balistiques haute performance", "href": "/marches/defense/" },
+        { "titre": "Industrie", "texte": "Céramiques techniques et traitements de surface pour l’industrie", "href": "/marches/industrie/" },
+        { "titre": "Horlogerie", "texte": "Des solutions d’impression et de décoration pour l’horlogerie", "href": "/marches/horlogerie/" }
+      ]
+    },
+    {
+      "type": "cta",
+      "titre": "Un composant à développer ou à produire ?",
+      "bouton": { "libelle": "Contactez-nous", "href": "/contact/" }
+    }
+  ]
+}

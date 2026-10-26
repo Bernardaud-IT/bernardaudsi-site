@@ -1,0 +1,30 @@
+{
+  "slug": "entreprise",
+  "titre": "Entreprise",
+  "titreSeo": "Un groupe industriel français | Bernardaud Solutions Industrielles",
+  "description": "Depuis 1863, Bernardaud développe en Haute-Vienne un outil industriel diversifié, réparti sur quatre sites de production, au service de marchés et d’applications variés.",
+  "surtitre": "Bernardaud",
+  "sousTitre": "Un groupe industriel français",
+  "chapo": "Depuis 1863, Bernardaud développe en Haute-Vienne un outil industriel diversifié, aujourd’hui réparti sur quatre sites de production. Le groupe réunit des compétences, des technologies et des moyens de production au service de marchés et d’applications variés, en France comme à l’international.",
+  "image": "manufacture-2025",
+  "blocs": [
+    {
+      "type": "citation",
+      "texte": "Bernardaud Solutions Industrielles accompagne ses partenaires du développement à l’industrialisation et à la production en série. La diversité de nos compétences et de nos moyens nous permet de répondre à des besoins industriels très variés.",
+      "auteur": "Michel Bernardaud",
+      "fonction": "Président-directeur général",
+      "image": "michel-bernardaud"
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "fond": "alt",
+      "cartes": [
+        { "titre": "Historique", "texte": "Une trajectoire industrielle depuis 1863", "href": "/entreprise/historique/" },
+        { "titre": "Actionnariat", "texte": "Un actionnariat familial et indépendant", "href": "/entreprise/actionnariat/" },
+        { "titre": "Certifications et RSE", "texte": "ISO 9001 | ISO 14001", "href": "/entreprise/certifications/" },
+        { "titre": "Partenaires", "texte": "Un écosystème scientifique et technologique", "href": "/entreprise/partenaires/" }
+      ]
+    }
+  ]
+}

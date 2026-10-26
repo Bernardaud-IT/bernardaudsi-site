@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import Section from '../components/Section.astro';
+import { lien, site } from '../lib/site';
+
+const fil = [
+  { libelle: 'Accueil', href: '/' },
+  { libelle: 'Plan du site', href: '/plan-du-site/' },
+];
+---
+
+<Base
+  titre={`Plan du site | ${site.nom}`}
+  description="Toutes les pages du site de Bernardaud Solutions Industrielles : offre, matériaux, marchés, outil industriel, entreprise."
+>
+  <section class="page-hero on-dark">
+    <div class="container page-hero-grid">
+      <div>
+        <Breadcrumb fil={fil} />
+        <h1>Plan du site</h1>
+      </div>
+    </div>
+  </section>
+  <Section>
+    <ul class="sitemap-list" role="list">
+      {
+        site.nav.map((rubrique) => (
+          <li>
+            <a href={lien(rubrique.href)}>{rubrique.libelle}</a>
+            {rubrique.enfants && (
+              <ul>
+                {rubrique.enfants.map((enfant) => (
+                  <li>
+                    <a href={lien(enfant.href)}>{enfant.libelle}</a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
+      <li><a href={lien('/contact/')}>Contact</a></li>
+      {
+        site.legal
+          .filter((entree) => entree.href !== '/plan-du-site/')
+          .map((entree) => (
+            <li>
+              <a href={lien(entree.href)}>{entree.libelle}</a>
+            </li>
+          ))
+      }
+    </ul>
+  </Section>
+</Base>

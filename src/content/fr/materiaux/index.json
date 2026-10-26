@@ -1,0 +1,43 @@
+{
+  "slug": "materiaux",
+  "titre": "Matériaux",
+  "titreSeo": "Matériaux céramiques techniques | Bernardaud Solutions Industrielles",
+  "description": "Porcelaine technique, alumine de pureté intermédiaire, alumine haute pureté, ZTA et zircone : propriétés et applications industrielles.",
+  "surtitre": "Céramiques techniques",
+  "chapo": "Les céramiques techniques présentent une combinaison de propriétés mécaniques, thermiques, électriques et chimiques qui les rendent adaptées à de nombreuses applications industrielles.",
+  "image": "ceramiques-poudre",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "Selon leur composition et leur microstructure, elles peuvent notamment offrir une faible densité, une bonne stabilité dimensionnelle, une dureté élevée, une forte résistance à l’usure et à l’abrasion, de bonnes propriétés d’isolation électrique, une résistance aux environnements chimiques exigeants ainsi qu’une tenue adaptée aux hautes températures.",
+        "Le choix du matériau dépend des conditions d’utilisation, des sollicitations mécaniques, thermiques, chimiques ou électriques, mais aussi des contraintes de mise en forme, de production et de coût."
+      ]
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "fond": "alt",
+      "titre": "Nos familles de matériaux",
+      "cartes": [
+        { "titre": "Porcelaine technique", "texte": "Céramique silicatée : isolation électrique, résistance mécanique et maîtrise des coûts.", "href": "/materiaux/porcelaine-technique/" },
+        { "titre": "Alumine de pureté intermédiaire", "texte": "Alumine Al₂O₃ – 90 à 96 %", "href": "/materiaux/alumine-purete-intermediaire/" },
+        { "titre": "Alumine haute pureté", "texte": "Alumine Al₂O₃ – supérieure à 98 %", "href": "/materiaux/alumine-haute-purete/" },
+        { "titre": "ZTA", "texte": "Alumine renforcée à la zircone – Al₂O₃ + ZrO₂", "href": "/materiaux/zta/" },
+        { "titre": "Zircone", "texte": "Zircone ZrO₂", "href": "/materiaux/zircone/" }
+      ]
+    },
+    {
+      "type": "texte",
+      "titre": "Autres céramiques techniques",
+      "paragraphes": [
+        "Bernardaud Solutions Industrielles travaille également d’autres familles et nuances de céramiques techniques afin de répondre à des contraintes thermiques, mécaniques, électriques ou chimiques spécifiques."
+      ]
+    },
+    {
+      "type": "cta",
+      "titre": "Quel matériau pour votre application ?",
+      "bouton": { "libelle": "Contactez-nous", "href": "/contact/" }
+    }
+  ]
+}

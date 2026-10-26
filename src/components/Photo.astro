@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import { photo } from '../lib/images';
+
+interface Props {
+  nom: string;
+  /** Largeur d'affichage selon l'écran, pour que le navigateur choisisse la bonne taille. */
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+  priorite?: boolean;
+  /** Image purement décorative : texte alternatif vide. */
+  decorative?: boolean;
+}
+const { nom, sizes = '100vw', loading = 'lazy', priorite = false, decorative = false } = Astro.props;
+
+const p = photo(nom);
+const largeurs = [480, 800, 1200, 1600, 2000].filter((l) => l < p.src.width);
+largeurs.push(p.src.width);
+---
+
+<Image
+  src={p.src}
+  alt={decorative ? '' : p.alt}
+  widths={largeurs}
+  sizes={sizes}
+  loading={priorite ? 'eager' : loading}
+  fetchpriority={priorite ? 'high' : 'auto'}
+  decoding="async"
+  format="webp"
+  quality={78}
+/>

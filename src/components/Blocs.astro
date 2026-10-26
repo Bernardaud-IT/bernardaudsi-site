@@ -1,0 +1,42 @@
+---
+import Texte from './blocs/Texte.astro';
+import Cartes from './blocs/Cartes.astro';
+import Groupes from './blocs/Groupes.astro';
+import Citation from './blocs/Citation.astro';
+import Chiffres from './blocs/Chiffres.astro';
+import Cta from './blocs/Cta.astro';
+import Galerie from './blocs/Galerie.astro';
+import Portraits from './blocs/Portraits.astro';
+import Contact from './blocs/Contact.astro';
+import Credits from './blocs/Credits.astro';
+import Legal from './blocs/Legal.astro';
+import type { Bloc } from '../lib/site';
+
+interface Props {
+  blocs: Bloc[];
+}
+const { blocs } = Astro.props;
+
+// Chaque `type` d'un fichier de contenu correspond à un composant. Voir docs/CONTENUS.md.
+const composants: Record<string, any> = {
+  texte: Texte,
+  cartes: Cartes,
+  groupes: Groupes,
+  citation: Citation,
+  chiffres: Chiffres,
+  cta: Cta,
+  galerie: Galerie,
+  portraits: Portraits,
+  contact: Contact,
+  credits: Credits,
+  legal: Legal,
+};
+---
+
+{
+  blocs.map(({ type, ...proprietes }) => {
+    const Composant = composants[type];
+    if (!Composant) throw new Error(`Type de bloc inconnu : « ${type} »`);
+    return <Composant {...proprietes} />;
+  })
+}

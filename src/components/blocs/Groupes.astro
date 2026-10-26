@@ -1,0 +1,55 @@
+---
+import Icon from '../Icon.astro';
+import Section from '../Section.astro';
+import { lien } from '../../lib/site';
+
+interface Groupe {
+  titre: string;
+  texte?: string;
+  items?: string[];
+  lien?: { libelle: string; href: string };
+}
+interface Props {
+  titre?: string;
+  intro?: string;
+  groupes: Groupe[];
+  fond?: 'alt' | 'sombre';
+  id?: string;
+}
+const { titre, intro, groupes, fond, id } = Astro.props;
+---
+
+<Section fond={fond} id={id}>
+  {
+    (titre || intro) && (
+      <div class="section-head reveal">
+        {titre && <h2>{titre}</h2>}
+        {intro && <p>{intro}</p>}
+      </div>
+    )
+  }
+  <div class="groups">
+    {
+      groupes.map((groupe) => (
+        <article class="group reveal">
+          <h3>{groupe.titre}</h3>
+          {groupe.texte && <p>{groupe.texte}</p>}
+          {
+            groupe.items && (
+              <ul class="checklist" role="list">
+                {groupe.items.map((item) => <li>{item}</li>)}
+              </ul>
+            )
+          }
+          {
+            groupe.lien && (
+              <a class="group-link" href={lien(groupe.lien.href)}>
+                {groupe.lien.libelle} <Icon nom="fleche" />
+              </a>
+            )
+          }
+        </article>
+      ))
+    }
+  </div>
+</Section>

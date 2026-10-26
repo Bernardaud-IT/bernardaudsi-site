@@ -1,0 +1,36 @@
+---
+import Icon from '../Icon.astro';
+import Section from '../Section.astro';
+import { site } from '../../lib/site';
+
+const { adresse, email, telephone, aConfirmer } = site.contact;
+const telephoneLien = telephone.replace(/\s/g, '');
+---
+
+<Section>
+  <h2 class="visually-hidden">Nos coordonnées</h2>
+  <div class="contact-grid reveal">
+    <div class="contact-card">
+      <h3><Icon nom="adresse" /> Adresse</h3>
+      <address>
+        {adresse.map((ligne) => <span>{ligne}<br /></span>)}
+      </address>
+    </div>
+    <div class="contact-card">
+      <h3><Icon nom="courrier" /> Courriel</h3>
+      <p><a href={`mailto:${email}`}>{email}</a></p>
+    </div>
+    <div class="contact-card">
+      <h3><Icon nom="telephone" /> Téléphone</h3>
+      <p><a href={`tel:${telephoneLien}`}>{telephone}</a></p>
+    </div>
+  </div>
+  {
+    aConfirmer && (
+      <p class="notice">
+        Version de validation : ces coordonnées sont à confirmer avant la mise en ligne (champ « contact » de
+        src/content/site.json).
+      </p>
+    )
+  }
+</Section>

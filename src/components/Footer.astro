@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import { photo } from '../lib/images';
+import { lien, site } from '../lib/site';
+
+const logo = photo('logo-bsi');
+const annee = new Date().getFullYear();
+const telephoneLien = site.contact.telephone.replace(/\s/g, '');
+const rubriques = site.nav.filter((r) => r.enfants);
+---
+
+<footer class="site-footer on-dark">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <Image src={logo.src} alt="" width={96} height={96} loading="lazy" decoding="async" />
+        <p>{site.nom}. {site.accroche}.</p>
+        <address class="footer-address">
+          {site.contact.adresse.map((ligne) => <span>{ligne}<br /></span>)}
+          <a href={`tel:${telephoneLien}`}>{site.contact.telephone}</a><br />
+          <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+        </address>
+      </div>
+
+      {
+        rubriques.map((rubrique) => (
+          <nav aria-label={rubrique.libelle}>
+            <h2 class="footer-title">
+              <a href={lien(rubrique.href)}>{rubrique.libelle}</a>
+            </h2>
+            <ul class="footer-list">
+              {rubrique.enfants?.map((enfant) => (
+                <li>
+                  <a href={lien(enfant.href)}>{enfant.libelle}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))
+      }
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {annee} Bernardaud. Ce site n'utilise aucun cookie.</p>
+      <ul>
+        <li><a href={lien('/outil-industriel/')}>Outil industriel</a></li>
+        <li><a href={lien('/contact/')}>Contact</a></li>
+        {
+          site.legal.map((entree) => (
+            <li>
+              <a href={lien(entree.href)}>{entree.libelle}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</footer>

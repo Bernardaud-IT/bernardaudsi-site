@@ -1,0 +1,66 @@
+{
+  "slug": "outil-industriel",
+  "titre": "Outil industriel",
+  "titreSeo": "Outil industriel en Haute-Vienne | Bernardaud Solutions Industrielles",
+  "description": "Des capacités industrielles complémentaires réparties sur plusieurs sites de production en Haute-Vienne, de la mise en forme à l’expédition.",
+  "surtitre": "Des moyens de production diversifiés en Haute-Vienne",
+  "chapo": "Bernardaud dispose de capacités industrielles importantes et complémentaires, réparties sur plusieurs sites de production en Haute-Vienne. Cet outil permet de couvrir différentes étapes de transformation, de mise en forme, d’impression, de décoration et de traitement des matériaux.",
+  "image": "site-aerien",
+  "blocs": [
+    {
+      "type": "groupes",
+      "titre": "Nos sites",
+      "groupes": [
+        {
+          "titre": "Oradour-sur-Glane — Céramiques techniques",
+          "texte": "Le site réunit les moyens dédiés au développement et à la production de composants en céramiques techniques.",
+          "items": [
+            "plusieurs procédés de mise en forme : pressage, injection, coulage sous pression, calibrage",
+            "capacités de déliantage et de frittage adaptées à différents matériaux, géométries et volumes",
+            "un parc de 24 fours de grande capacité",
+            "des moyens permettant d’accompagner la production, du prototype à la grande série"
+          ],
+          "lien": { "libelle": "Céramiques techniques", "href": "/offre/ceramiques-techniques/" }
+        },
+        {
+          "titre": "Limoges — Imprimerie sérigraphique",
+          "texte": "Le site d’imprimerie concentre les équipements et compétences nécessaires à la réalisation de décors et impressions sérigraphiques sur une grande diversité de supports.",
+          "items": [
+            "préparation et mise au point des impressions",
+            "production en petites et grandes séries",
+            "adaptation aux contraintes techniques et esthétiques des différents supports et applications"
+          ],
+          "lien": { "libelle": "Imprimerie sérigraphique", "href": "/offre/imprimerie-serigraphique/" }
+        },
+        {
+          "titre": "Limoges — Décoration et traitements de surface",
+          "texte": "Ce site rassemble différents procédés de décoration et de traitement de surface, destinés à modifier l’aspect ou les propriétés fonctionnelles des pièces.",
+          "items": [
+            "procédés de décoration et de finition",
+            "dépôt de couches minces, notamment par PVD",
+            "solutions de fonctionnalisation et de finition adaptées aux exigences de chaque application"
+          ],
+          "lien": { "libelle": "Décoration et traitements de surface", "href": "/offre/decoration-traitements-de-surface/" }
+        },
+        {
+          "titre": "Aix-sur-Vienne — Expéditions",
+          "texte": "Le site d’Aix-sur-Vienne est dédié à la préparation et à l’expédition des commandes, en France comme à l’international."
+        }
+      ]
+    },
+    {
+      "type": "galerie",
+      "fond": "alt",
+      "images": [
+        { "nom": "four-chariot" },
+        { "nom": "serigraphie-atelier" },
+        { "nom": "atelier-production" }
+      ]
+    },
+    {
+      "type": "cta",
+      "titre": "Découvrir ce que nous pouvons produire pour vous",
+      "bouton": { "libelle": "Contactez-nous", "href": "/contact/" }
+    }
+  ]
+}

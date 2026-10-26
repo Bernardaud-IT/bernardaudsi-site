@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Blocs from '../components/Blocs.astro';
+import { filAriane, lien, pages, site, type Page } from '../lib/site';
+
+// Une page est générée pour chaque fichier de src/content/fr/ (hors accueil, traité par index.astro).
+export function getStaticPaths() {
+  return pages
+    .filter((page) => page.slug !== '')
+    .map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+
+const { page } = Astro.props as { page: Page };
+
+const fil = filAriane(page.slug);
+const filDonnees = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: fil.map((etape, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: etape.libelle,
+    item: new URL(lien(etape.href), Astro.site).href,
+  })),
+};
+---
+
+<Base
+  titre={page.titreSeo ?? `${page.titre} | ${site.nom}`}
+  description={page.description}
+  noindex={page.brouillon}
+  jsonld={[filDonnees]}
+>
+  <PageHero page={page} />
+  <Blocs blocs={page.blocs} />
+</Base>

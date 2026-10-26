@@ -1,0 +1,20 @@
+---
+// Corps d'un bloc de texte : paragraphes, liste à puces, paragraphes de conclusion.
+interface Props {
+  paragraphes?: string[];
+  liste?: string[];
+  colonnes?: boolean;
+  paragraphesApres?: string[];
+}
+const { paragraphes = [], liste, colonnes, paragraphesApres = [] } = Astro.props;
+---
+
+{paragraphes.map((p) => <p>{p}</p>)}
+{
+  liste && (
+    <ul class:list={['checklist', colonnes && 'checklist--cols']} role="list">
+      {liste.map((item) => <li>{item}</li>)}
+    </ul>
+  )
+}
+{paragraphesApres.map((p) => <p>{p}</p>)}

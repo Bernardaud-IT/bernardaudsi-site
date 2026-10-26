@@ -1,0 +1,41 @@
+{
+  "slug": "materiaux/alumine-purete-intermediaire",
+  "titre": "Alumine de pureté intermédiaire",
+  "titreSeo": "Alumine 90 à 96 % | Bernardaud Solutions Industrielles",
+  "description": "Alumine Al₂O₃ de pureté intermédiaire (90 à 96 %) : bon compromis entre résistance mécanique, dureté, résistance à l’usure, propriétés électriques et coût.",
+  "surtitre": "Matériaux",
+  "sousTitre": "Alumine Al₂O₃ – 90 à 96 %",
+  "chapo": "Les alumines de pureté intermédiaire offrent un bon compromis entre résistance mécanique, dureté, résistance à l’usure, propriétés électriques et coût.",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "Par rapport aux porcelaines techniques, leur teneur plus élevée en alumine permet notamment d’améliorer les performances mécaniques, la résistance à l’abrasion et la tenue thermique."
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Applications industrielles",
+      "liste": [
+        "Billes et éléments de broyage",
+        "Tubes de protection thermique",
+        "Buses et pièces soumises à l’abrasion",
+        "Guides-fils",
+        "Vannes et composants d’usure",
+        "Isolants et supports électriques"
+      ],
+      "colonnes": true
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "titre": "Voir aussi",
+      "cartes": [
+        { "titre": "Alumine haute pureté", "texte": "Alumine Al₂O₃ – supérieure à 98 %", "href": "/materiaux/alumine-haute-purete/" },
+        { "titre": "Tous les matériaux", "href": "/materiaux/" }
+      ]
+    },
+    { "type": "cta", "titre": "Un composant en alumine ?", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

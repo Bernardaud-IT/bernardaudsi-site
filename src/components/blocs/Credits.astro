@@ -1,0 +1,22 @@
+---
+import Section from '../Section.astro';
+import { credits } from '../../lib/images';
+
+const liste = credits();
+---
+
+<Section>
+  <div class="prose legal">
+    <h2>Crédits photographiques</h2>
+    {
+      liste.map((entree) => (
+        <p>
+          <strong>{entree.credit}</strong>
+          <br />
+          {entree.photos.join(' ; ')}.
+        </p>
+      ))
+    }
+    <p>Les autres photographies sont la propriété de Bernardaud.</p>
+  </div>
+</Section>

@@ -1,0 +1,30 @@
+---
+import Photo from '../Photo.astro';
+import Section from '../Section.astro';
+import { photo } from '../../lib/images';
+
+interface Props {
+  titre?: string;
+  images: { nom: string; legende?: string }[];
+  fond?: 'alt' | 'sombre';
+}
+const { titre, images, fond } = Astro.props;
+---
+
+<Section fond={fond}>
+  {titre && <h2 class="reveal">{titre}</h2>}
+  <ul class="figures reveal" role="list">
+    {
+      images.map((image) => (
+        <li>
+          <figure>
+            <Photo nom={image.nom} sizes="(max-width: 640px) 100vw, 33vw" />
+            {(image.legende || photo(image.nom).credit) && (
+              <figcaption class="figure-caption">{image.legende ?? photo(image.nom).credit}</figcaption>
+            )}
+          </figure>
+        </li>
+      ))
+    }
+  </ul>
+</Section>

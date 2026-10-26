@@ -1,0 +1,46 @@
+{
+  "slug": "entreprise/historique",
+  "titre": "Historique",
+  "titreSeo": "Historique depuis 1863 | Bernardaud Solutions Industrielles",
+  "description": "Fondée à Limoges en 1863, Bernardaud s’est développée par des investissements industriels continus : four tunnel, pressage isostatique, injection, PVD.",
+  "surtitre": "Entreprise",
+  "sousTitre": "Une trajectoire industrielle depuis 1863",
+  "chapo": "Fondée à Limoges en 1863, Bernardaud s’est développée au fil des générations par des investissements industriels continus et l’intégration de nouvelles technologies de production.",
+  "image": "archive-manufacture-1890",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "Four tunnel, pressage isostatique, injection, traitements de surface PVD : ces évolutions témoignent d’une même volonté d’adapter l’outil industriel, d’explorer de nouveaux procédés et d’élargir progressivement les compétences du groupe.",
+        "Cette capacité à investir, expérimenter et faire évoluer ses moyens de production a permis à Bernardaud de développer, au-delà de son activité historique, des savoir-faire aujourd’hui mobilisés pour des applications industrielles et des céramiques techniques."
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Une entreprise familiale, plusieurs générations d’investissements industriels",
+      "paragraphes": [
+        "Depuis sa création, chaque génération a contribué à faire évoluer l’entreprise par de nouveaux équipements, procédés et choix industriels."
+      ],
+      "image": "archive-four-bois",
+      "imageSens": "gauche"
+    },
+    {
+      "type": "galerie",
+      "images": [
+        { "nom": "archive-manufacture-1963" },
+        { "nom": "archive-four-tunnel" },
+        { "nom": "dessin-manufacture", "legende": "Dessin de la manufacture Bernardaud" }
+      ]
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "fond": "alt",
+      "cartes": [
+        { "titre": "Actionnariat", "texte": "Un actionnariat familial et indépendant", "href": "/entreprise/actionnariat/" },
+        { "titre": "Outil industriel", "texte": "Des moyens de production diversifiés en Haute-Vienne", "href": "/outil-industriel/" }
+      ]
+    }
+  ]
+}

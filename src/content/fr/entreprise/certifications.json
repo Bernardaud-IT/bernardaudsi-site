@@ -1,0 +1,27 @@
+{
+  "slug": "entreprise/certifications",
+  "titre": "Certifications et RSE",
+  "titreSeo": "Certifications ISO 9001 et 14001 | Bernardaud Solutions Industrielles",
+  "description": "Sites certifiés ISO 9001 (management de la qualité) et ISO 14001 (management environnemental), démarche RSE évaluée par EcoVadis, index de l’égalité professionnelle.",
+  "surtitre": "Entreprise",
+  "sousTitre": "ISO 9001 | ISO 14001",
+  "chapo": "Les sites concernés de Bernardaud sont certifiés selon les référentiels ISO 9001, relatifs au management de la qualité, et ISO 14001, consacrés au management environnemental.",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "Ces certifications s’inscrivent dans une démarche d’amélioration continue des processus, de maîtrise de la qualité et de réduction des impacts environnementaux liés aux activités industrielles."
+      ],
+      "image": "certification-socotec"
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Responsabilité sociale et environnementale",
+      "paragraphes": [
+        "La démarche RSE de Bernardaud fait également l’objet d’une évaluation EcoVadis, portant notamment sur les pratiques environnementales, sociales, éthiques et les achats responsables.",
+        "L’entreprise suit par ailleurs son index de l’égalité professionnelle entre les femmes et les hommes, conformément aux obligations réglementaires."
+      ]
+    }
+  ]
+}

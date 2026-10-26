@@ -1,0 +1,64 @@
+{
+  "slug": "offre/decoration-traitements-de-surface",
+  "titre": "Décoration et traitements de surface",
+  "titreSeo": "Décoration et traitements de surface | Bernardaud Solutions Industrielles",
+  "surtitre": "Offre",
+  "description": "Solutions de décoration, de revêtement et de traitement de surface par PVD, à finalité esthétique ou fonctionnelle, à Limoges.",
+  "chapo": "Solutions de décoration, revêtement et traitement de surface, pour répondre à des objectifs esthétiques ou fonctionnels.",
+  "image": "serigraphie-decor",
+  "blocs": [
+    {
+      "type": "texte",
+      "titre": "Limoges, le site de décoration et de traitements de surface",
+      "paragraphes": [
+        "Ce site rassemble différents procédés de décoration et de traitement de surface, destinés à modifier l’aspect ou les propriétés fonctionnelles des pièces :"
+      ],
+      "liste": [
+        "procédés de décoration et de finition",
+        "dépôt de couches minces, notamment par PVD",
+        "solutions de fonctionnalisation et de finition adaptées aux exigences de chaque application"
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Modifier l’aspect, la couleur ou la texture des surfaces",
+      "paragraphes": [
+        "Bernardaud Solutions Industrielles propose différents procédés permettant de modifier l’aspect, la couleur ou la texture des surfaces. Selon les composants et les résultats recherchés, ces solutions comprennent notamment :"
+      ],
+      "liste": [
+        "PVD",
+        "texturation et création de reliefs",
+        "coloration de la matière",
+        "dépôts de métaux précieux, notamment or et platine",
+        "finitions décoratives spécifiques"
+      ],
+      "colonnes": true
+    },
+    {
+      "type": "groupes",
+      "titre": "Traitements de surface et PVD pour l’industrie",
+      "groupes": [
+        {
+          "titre": "Fonctions",
+          "items": ["Protection contre l’usure", "Réduction du frottement", "Fonctionnalisation des surfaces", "Finitions esthétiques"]
+        }
+      ]
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "fond": "alt",
+      "titre": "Marchés concernés",
+      "cartes": [
+        { "titre": "Industrie", "texte": "Céramiques techniques et traitements de surface pour l’industrie", "href": "/marches/industrie/" },
+        { "titre": "Horlogerie", "texte": "Des solutions d’impression et de décoration pour l’horlogerie", "href": "/marches/horlogerie/" }
+      ]
+    },
+    {
+      "type": "cta",
+      "titre": "Une finition à développer ?",
+      "bouton": { "libelle": "Contactez-nous", "href": "/contact/" }
+    }
+  ]
+}

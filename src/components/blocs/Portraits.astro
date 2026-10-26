@@ -1,0 +1,28 @@
+---
+import Photo from '../Photo.astro';
+import Section from '../Section.astro';
+
+interface Props {
+  personnes: { image: string; nom: string; fonction?: string }[];
+  fond?: 'alt' | 'sombre';
+}
+const { personnes, fond } = Astro.props;
+---
+
+<Section fond={fond}>
+  <ul class="portraits reveal" role="list">
+    {
+      personnes.map((personne) => (
+        <li>
+          <figure class="portrait">
+            <Photo nom={personne.image} sizes="224px" />
+            <figcaption>
+              <strong>{personne.nom}</strong>
+              {personne.fonction}
+            </figcaption>
+          </figure>
+        </li>
+      ))
+    }
+  </ul>
+</Section>

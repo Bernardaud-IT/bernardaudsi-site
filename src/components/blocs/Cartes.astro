@@ -1,0 +1,63 @@
+---
+import Icon from '../Icon.astro';
+import Photo from '../Photo.astro';
+import Section from '../Section.astro';
+import { lien } from '../../lib/site';
+
+interface Carte {
+  titre: string;
+  texte?: string;
+  href: string;
+  image?: string;
+  /** Sans image : une carte à motif graphique s'affiche à la place, si `motif` est vrai. */
+  motif?: boolean;
+}
+interface Props {
+  /** « piliers » : cartes numérotées avec visuel ; « liens » : cartes sobres sans visuel. */
+  style?: 'piliers' | 'liens';
+  titre?: string;
+  intro?: string;
+  cartes: Carte[];
+  fond?: 'alt' | 'sombre';
+  id?: string;
+}
+const { style = 'liens', titre, intro, cartes, fond, id } = Astro.props;
+---
+
+<Section fond={fond} id={id}>
+  {
+    (titre || intro) && (
+      <div class="section-head reveal">
+        {titre && <h2>{titre}</h2>}
+        {intro && <p>{intro}</p>}
+      </div>
+    )
+  }
+  {/* Sans titre visible, un titre masqué garde la hiérarchie des titres correcte pour les lecteurs d'écran. */}
+  {!titre && <h2 class="visually-hidden">Pages de cette rubrique</h2>}
+  <ul class:list={['cards', style === 'liens' && 'cards--liens']} role="list">
+    {
+      cartes.map((carte, i) => (
+        <li class="reveal">
+          <article class:list={['card', style === 'liens' && 'card--plain']}>
+            {style === 'piliers' && (carte.image || carte.motif) && (
+              <div class:list={['card-media', !carte.image && 'card-media--pattern']}>
+                {carte.image && <Photo nom={carte.image} sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw" />}
+              </div>
+            )}
+            <div class="card-body">
+              {style === 'piliers' && <p class="card-num">{String(i + 1).padStart(2, '0')}</p>}
+              <h3>
+                <a class="card-title-link" href={lien(carte.href)}>{carte.titre}</a>
+              </h3>
+              {carte.texte && <p>{carte.texte}</p>}
+              <span class="card-link" aria-hidden="true">
+                En savoir plus <Icon nom="fleche" />
+              </span>
+            </div>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
+</Section>

@@ -1,0 +1,36 @@
+{
+  "slug": "marches/cosmetiques-parfums-vins-spiritueux",
+  "titre": "Cosmétiques, parfums, vins et spiritueux",
+  "titreSeo": "Contenants en porcelaine sur mesure | Bernardaud Solutions Industrielles",
+  "description": "Écrins, flacons et pièces d’exception en porcelaine sur mesure pour les maisons de cosmétiques, de parfumerie, de vins et de spiritueux : formes, couleurs, décors, finitions.",
+  "surtitre": "Marchés",
+  "sousTitre": "Des contenants d’exception",
+  "chapo": "Pour les maisons de cosmétiques, de parfumerie, de vins et de spiritueux, le contenant participe pleinement à l’identité du produit. Bernardaud met à leur service sa connaissance de la porcelaine, de la couleur et du décor pour concevoir des contenants et objets sur mesure.",
+  "image": "manufacture-2025",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "La porcelaine offre une grande liberté de création par la richesse de ses formes, de ses couleurs, de ses textures et de ses finitions. Elle permet de concevoir des pièces singulières, depuis les séries limitées jusqu’aux lignes permanentes.",
+        "Bernardaud Solutions Industrielles accompagne chaque projet dans la recherche du juste équilibre entre intention esthétique, qualité d’exécution et contraintes d’usage, avec la capacité de répondre à des cahiers des charges exigeants et d’assurer une production régulière en série."
+      ]
+    },
+    {
+      "type": "groupes",
+      "fond": "alt",
+      "titre": "Applications",
+      "groupes": [
+        { "titre": "Écrins", "items": ["Formes sur mesure", "Couleurs et effets de matière", "Décors personnalisés", "Finitions précieuses", "Reliefs et textures"] },
+        {
+          "titre": "Flacons et contenants",
+          "items": ["Formes et formats spécifiques", "Décors personnalisés", "Couleurs sur mesure", "Finitions décoratives", "Intégration des contraintes fonctionnelles du contenant"]
+        },
+        {
+          "titre": "Pièces d’exception",
+          "items": ["Développements sur mesure", "Formes complexes", "Reliefs et textures", "Décors et finitions spécifiques", "Petites séries et éditions limitées"]
+        }
+      ]
+    },
+    { "type": "cta", "titre": "Un contenant à imaginer ?", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

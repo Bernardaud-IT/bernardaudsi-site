@@ -1,0 +1,31 @@
+{
+  "slug": "entreprise/actionnariat",
+  "titre": "Actionnariat",
+  "titreSeo": "Actionnariat familial | Bernardaud Solutions Industrielles",
+  "description": "Depuis plus de 160 ans, Bernardaud s’appuie sur un actionnariat familial stable et indépendant, qui permet d’inscrire les décisions de l’entreprise dans le temps long.",
+  "surtitre": "Entreprise",
+  "sousTitre": "Un actionnariat familial et indépendant",
+  "chapo": "Depuis plus de 160 ans, Bernardaud s’appuie sur un actionnariat familial stable et indépendant, qui permet d’inscrire les décisions de l’entreprise dans le temps long.",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "La famille Bernardaud reste directement impliquée dans la direction et les activités du groupe. Cette proximité avec les équipes, les marchés et les enjeux industriels favorise une prise de décision rapide et une continuité dans les orientations stratégiques."
+      ]
+    },
+    {
+      "type": "portraits",
+      "personnes": [
+        { "image": "michel-bernardaud", "nom": "Michel Bernardaud", "fonction": "Président-directeur général" },
+        { "image": "charles-bernardaud", "nom": "Charles Bernardaud" }
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "paragraphes": [
+        "Cette gouvernance permet d’engager des investissements industriels de long terme, de faire évoluer les outils de production et de développer de nouvelles activités tout en conservant une maîtrise directe de la stratégie de l’entreprise."
+      ]
+    }
+  ]
+}

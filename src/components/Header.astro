@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import { photo } from '../lib/images';
+import { lien, site } from '../lib/site';
+
+const chemin = Astro.url.pathname;
+const logo = photo('logo-bsi');
+
+// Une rubrique est « courante » sur sa page et sur toutes les pages qui en dépendent.
+const estCourant = (href: string) => (href === '/' ? chemin === lien('/') : chemin.startsWith(lien(href)));
+---
+
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href={lien('/')} aria-label={`${site.nom}, accueil`}>
+      <Image src={logo.src} alt="" width={96} height={96} loading="eager" decoding="async" />
+      <span class="brand-text">
+        <strong>Bernardaud</strong>
+        <span>Solutions Industrielles</span>
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="menu-principal"
+      data-menu-toggle
+    >
+      <Icon nom="menu" class="icon-open" />
+      <Icon nom="fermer" class="icon-close" />
+      <span>Menu</span>
+    </button>
+
+    <nav class="main-nav" id="menu-principal" aria-label="Navigation principale">
+      <ul class="nav-list">
+        {
+          site.nav.map((rubrique, i) => (
+            <li class:list={['nav-item', rubrique.enfants && 'has-sub']}>
+              <a class="nav-link" href={lien(rubrique.href)} aria-current={estCourant(rubrique.href) ? 'true' : undefined}>
+                {rubrique.libelle}
+              </a>
+              {rubrique.enfants && (
+                <>
+                  <button
+                    class="sub-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls={`sous-menu-${i}`}
+                    data-sub-toggle
+                  >
+                    <span class="visually-hidden">Afficher les pages de {rubrique.libelle}</span>
+                    <Icon nom="chevron" />
+                  </button>
+                  <ul class="subnav" id={`sous-menu-${i}`}>
+                    {rubrique.enfants.map((enfant) => (
+                      <li>
+                        <a href={lien(enfant.href)} aria-current={chemin === lien(enfant.href) ? 'page' : undefined}>
+                          {enfant.libelle}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+      <a class="btn btn-primary nav-cta" href={lien('/contact/')}>Nous contacter</a>
+    </nav>
+  </div>
+</header>

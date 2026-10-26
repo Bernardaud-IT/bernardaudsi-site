@@ -1,0 +1,36 @@
+{
+  "slug": "mentions-legales",
+  "titre": "Mentions légales",
+  "titreSeo": "Mentions légales | Bernardaud Solutions Industrielles",
+  "description": "Mentions légales du site de Bernardaud Solutions Industrielles : éditeur, hébergeur, propriété intellectuelle, crédits photographiques.",
+  "brouillon": true,
+  "blocs": [
+    {
+      "type": "legal",
+      "sections": [
+        {
+          "titre": "Éditeur du site",
+          "paragraphes": [
+            "Le site bernardaudsi.com est édité par [à compléter : raison sociale, forme juridique, capital, RCS et numéro SIREN, numéro de TVA intracommunautaire], dont le siège social est situé [à compléter : adresse du siège].",
+            "Directeur de la publication : [à compléter : nom et fonction]."
+          ]
+        },
+        {
+          "titre": "Hébergeur",
+          "paragraphes": ["Le site est hébergé par OVH SAS, 2 rue Kellermann, 59100 Roubaix, France [à compléter : vérifier les informations de l’hébergeur avant la mise en ligne]."]
+        },
+        {
+          "titre": "Propriété intellectuelle",
+          "paragraphes": [
+            "L’ensemble des contenus du site (textes, photographies, logos, marques, schémas) est la propriété de Bernardaud ou de ses ayants droit. Toute reproduction ou représentation, totale ou partielle, sans autorisation écrite préalable est interdite."
+          ]
+        },
+        {
+          "titre": "Données personnelles et cookies",
+          "paragraphes": ["Ce site n’utilise aucun cookie ni outil de mesure d’audience. Pour en savoir plus, consultez la politique de confidentialité."]
+        }
+      ]
+    },
+    { "type": "credits" }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "materiaux/zta",
+  "titre": "ZTA",
+  "titreSeo": "ZTA, alumine renforcée zircone | Bernardaud Solutions Industrielles",
+  "description": "Le ZTA (Zirconia Toughened Alumina) associe une matrice d’alumine à des particules de zircone : ténacité accrue, dureté et résistance à l’usure de l’alumine.",
+  "surtitre": "Matériaux",
+  "sousTitre": "Alumine renforcée à la zircone – Al₂O₃ + ZrO₂",
+  "chapo": "Le ZTA – Zirconia Toughened Alumina – est un matériau composite associant une matrice d’alumine à des particules de zircone.",
+  "image": "defense-pieces",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "Cette combinaison permet d’améliorer la ténacité et la résistance à la propagation des fissures, tout en conservant une grande partie de la dureté et de la résistance à l’usure propres à l’alumine.",
+        "Le ZTA constitue ainsi un compromis particulièrement intéressant pour les applications soumises à des contraintes mécaniques importantes."
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Applications industrielles",
+      "liste": [
+        "Composants de pompes et de vannes",
+        "Pièces soumises à l’usure et aux chocs",
+        "Composants mécaniques à haute résistance",
+        "Applications balistiques",
+        "Outils et composants industriels soumis à de fortes sollicitations",
+        "Applications médicales selon les formulations"
+      ],
+      "colonnes": true
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "titre": "Voir aussi",
+      "cartes": [
+        { "titre": "Zircone", "texte": "Zircone ZrO₂", "href": "/materiaux/zircone/" },
+        { "titre": "Défense", "texte": "Céramiques balistiques haute performance", "href": "/marches/defense/" }
+      ]
+    },
+    { "type": "cta", "titre": "Un composant en ZTA ?", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

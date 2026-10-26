@@ -1,0 +1,30 @@
+---
+import Breadcrumb from './Breadcrumb.astro';
+import Photo from './Photo.astro';
+import { filAriane, type Page } from '../lib/site';
+
+interface Props {
+  page: Page;
+}
+const { page } = Astro.props;
+const fil = filAriane(page.slug);
+---
+
+<section class:list={['page-hero on-dark', page.image && 'has-image']}>
+  <div class="container page-hero-grid">
+    <div>
+      <Breadcrumb fil={fil} />
+      {page.surtitre && <p class="eyebrow">{page.surtitre}</p>}
+      <h1>{page.titre}</h1>
+      {page.sousTitre && <p class="page-subtitle">{page.sousTitre}</p>}
+      {page.chapo && <p class="page-chapo">{page.chapo}</p>}
+    </div>
+    {
+      page.image && (
+        <figure class="page-hero-media">
+          <Photo nom={page.image} priorite sizes="(max-width: 880px) 100vw, 45vw" />
+        </figure>
+      )
+    }
+  </div>
+</section>

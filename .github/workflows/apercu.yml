@@ -1,0 +1,52 @@
+# Aperçu de validation du site (GitHub Pages). Lancement MANUEL seulement : onglet Actions > « Aperçu de validation » > Run workflow.
+# Le site obtenu n'est jamais indexé (PUBLIC_MODE_APERCU=1). Voir docs/DEPLOIEMENT.md, option A.
+# Attention : GitHub Pages sur un dépôt privé exige une offre payante ; non testé.
+name: Aperçu de validation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/configure-pages@v5
+      - run: npm ci
+      - name: Construire
+        run: npm run build
+        env:
+          SITE_URL: https://bernardaud-it.github.io
+          SITE_BASE: /bernardaudsi-site/
+          PUBLIC_MODE_APERCU: '1'
+      - name: Contrôler
+        run: npm run verifier
+        env:
+          SITE_BASE: /bernardaudsi-site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deployer:
+    needs: construire
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - id: deploiement
+        uses: actions/deploy-pages@v4

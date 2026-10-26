@@ -1,0 +1,69 @@
+{
+  "slug": "marches/horlogerie",
+  "titre": "Horlogerie",
+  "titreSeo": "Décoration pour l’horlogerie | Bernardaud Solutions Industrielles",
+  "description": "Imprimerie sérigraphique, décoration et traitements de surface pour cadrans, carrures, lunettes, bracelets et verres saphir : chromos, PVD, reliefs.",
+  "surtitre": "Marchés",
+  "sousTitre": "Des solutions d’impression et de décoration pour l’horlogerie",
+  "chapo": "Bernardaud Solutions Industrielles met ses compétences en imprimerie sérigraphique, décoration et traitements de surface au service des composants horlogers.",
+  "image": "serigraphie-impression",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "Ces savoir-faire permettent de travailler la couleur, le décor, la texture, le relief ou encore l’aspect de surface de différents composants, selon les exigences esthétiques et techniques de chaque projet."
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Imprimerie sérigraphique",
+      "paragraphes": [
+        "Notre imprimerie intégrée accompagne la conception et la production de chromos de haute précision destinés notamment aux cadrans et composants horlogers. Elle permet de développer différents types de décors :"
+      ],
+      "liste": [
+        "chromos basse température (on-glaze), offrant une large liberté chromatique",
+        "chromos haute température (in-glaze), intégrés à l’émail lors de la cuisson",
+        "décors fins, motifs, index et éléments graphiques",
+        "développements spécifiques selon les supports et les contraintes du projet"
+      ],
+      "paragraphesApres": ["L’accompagnement couvre la mise au point graphique, le développement des décors et leur production en série."],
+      "image": "serigraphie-ecran"
+    },
+    {
+      "type": "texte",
+      "titre": "Décoration et traitements de surface",
+      "paragraphes": [
+        "Bernardaud Solutions Industrielles propose également différents procédés permettant de modifier l’aspect, la couleur ou la texture des surfaces. Selon les composants et les résultats recherchés, ces solutions comprennent notamment :"
+      ],
+      "liste": ["PVD", "texturation et création de reliefs", "coloration de la matière", "dépôts de métaux précieux, notamment or et platine", "finitions décoratives spécifiques"],
+      "paragraphesApres": [
+        "Ces procédés peuvent être appliqués à différents composants horlogers tels que les cadrans, carrures, lunettes, bracelets ou verres saphir, selon les caractéristiques du support."
+      ]
+    },
+    {
+      "type": "groupes",
+      "fond": "alt",
+      "titre": "Applications",
+      "groupes": [
+        {
+          "titre": "Cadrans",
+          "items": ["Imprimerie sérigraphique", "Chromos basse température", "Chromos haute température", "Décoration", "PVD", "Texturation", "Reliefs", "Dépôts de métaux précieux"]
+        },
+        { "titre": "Carrures et lunettes", "items": ["Coloration de la matière", "PVD", "Texturation", "Dépôts de métaux précieux"] },
+        { "titre": "Bracelets", "items": ["Coloration de la matière", "Décoration de composants céramiques", "PVD", "Dépôts de métaux précieux"] },
+        { "titre": "Verres saphir", "items": ["PVD", "Effets de surface et reflets"] }
+      ]
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "titre": "Pour aller plus loin",
+      "cartes": [
+        { "titre": "Imprimerie sérigraphique", "href": "/offre/imprimerie-serigraphique/" },
+        { "titre": "Décoration et traitements de surface", "href": "/offre/decoration-traitements-de-surface/" }
+      ]
+    },
+    { "type": "cta", "titre": "Un composant horloger à décorer ?", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

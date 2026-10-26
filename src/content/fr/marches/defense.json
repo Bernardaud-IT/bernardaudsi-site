@@ -1,0 +1,81 @@
+{
+  "slug": "marches/defense",
+  "titre": "Défense",
+  "titreSeo": "Céramiques balistiques, défense | Bernardaud Solutions Industrielles",
+  "description": "Développement et fabrication en France de composants en céramiques techniques pour la protection balistique : alumine haute pureté, ZTA, zircone, niveaux VPAM et NIJ.",
+  "surtitre": "Marchés",
+  "sousTitre": "Céramiques balistiques haute performance",
+  "chapo": "Bernardaud Solutions Industrielles développe et fabrique en France des composants en céramiques techniques destinés aux systèmes de protection balistique. L’offre comprend des géométries et formulations standards ainsi que des développements sur mesure adaptés aux exigences spécifiques des applications de défense et de sécurité.",
+  "image": "casques-balistique",
+  "blocs": [
+    {
+      "type": "texte",
+      "titre": "Protection contre les menaces balistiques",
+      "paragraphes": [
+        "Les céramiques balistiques permettent de répondre à des niveaux de menace élevés tout en contribuant à limiter la masse du système de protection.",
+        "Grâce à leur grande dureté, elles participent à la fragmentation du projectile et à la dispersion de l’énergie lors de l’impact. Elles sont intégrées à un système associant généralement une face céramique à un matériau de support — polyéthylène, aramide ou composite — chargé de retenir les fragments et d’absorber l’énergie résiduelle."
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Composants céramiques",
+      "paragraphes": [
+        "Bernardaud Solutions Industrielles développe et produit différents types de composants pour leur intégration dans des systèmes de protection :"
+      ],
+      "liste": ["carreaux, hexagones et pellets", "plaques monolithiques", "pièces à courbures complexes", "géométries et épaisseurs spécifiques développées sur mesure"],
+      "paragraphesApres": [
+        "Les matériaux proposés comprennent notamment des alumines haute pureté, du ZTA – alumine renforcée à la zircone – et de la zircone."
+      ],
+      "image": "plaques-cuisson"
+    },
+    {
+      "type": "texte",
+      "titre": "Applications",
+      "paragraphes": ["Les composants céramiques peuvent être intégrés à différentes architectures de protection destinées notamment :"],
+      "liste": [
+        "aux protections individuelles et boucliers balistiques",
+        "aux véhicules blindés et véhicules logistiques",
+        "aux navires et équipements maritimes",
+        "aux aéronefs, hélicoptères et protections de cockpit",
+        "aux équipements sensibles tels que radars, postes de commandement et boîtiers protégés"
+      ]
+    },
+    {
+      "type": "galerie",
+      "fond": "alt",
+      "images": [
+        { "nom": "defense-pieces" },
+        { "nom": "defense-plaque" },
+        { "nom": "defense-courbe" }
+      ]
+    },
+    {
+      "type": "texte",
+      "titre": "Du développement à la production en série",
+      "paragraphes": [
+        "Bernardaud Solutions Industrielles accompagne aussi bien les besoins standards que les développements spécifiques : adaptation des matériaux, dimensions, épaisseurs, courbures et géométries complexes, réalisation de prototypes et de lots de qualification, puis passage à la production en série.",
+        "Ses capacités industrielles permettent de répondre à des petites séries spécialisées comme à des besoins de volumes plus importants, avec un développement et une production réalisés en France. La fabrication, la traçabilité et la caractérisation sont intégrées aux systèmes de management certifiés ISO 9001 et ISO 14001."
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Niveaux de protection",
+      "paragraphes": [
+        "Les composants Bernardaud sont conçus pour être intégrés à des systèmes visant notamment des niveaux de protection VPAM, NIJ III+, NIJ IV, selon la configuration du système complet."
+      ]
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "titre": "Matériaux",
+      "cartes": [
+        { "titre": "Alumine haute pureté", "texte": "Alumine Al₂O₃ – supérieure à 98 %", "href": "/materiaux/alumine-haute-purete/" },
+        { "titre": "ZTA", "texte": "Alumine renforcée à la zircone – Al₂O₃ + ZrO₂", "href": "/materiaux/zta/" },
+        { "titre": "Zircone", "texte": "Zircone ZrO₂", "href": "/materiaux/zircone/" }
+      ]
+    },
+    { "type": "cta", "titre": "Un besoin de protection balistique ?", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

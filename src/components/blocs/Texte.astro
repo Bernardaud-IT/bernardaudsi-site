@@ -1,0 +1,57 @@
+---
+import Photo from '../Photo.astro';
+import Section from '../Section.astro';
+import TexteCorps from './TexteCorps.astro';
+import { photo } from '../../lib/images';
+
+interface Props {
+  titre?: string;
+  surtitre?: string;
+  paragraphes?: string[];
+  /** Liste à puces placée après les paragraphes. */
+  liste?: string[];
+  colonnes?: boolean;
+  paragraphesApres?: string[];
+  image?: string;
+  /** Position de l'image : à droite par défaut. */
+  imageSens?: 'gauche' | 'droite';
+  fond?: 'alt' | 'sombre';
+  id?: string;
+}
+const { titre, surtitre, paragraphes, liste, colonnes, paragraphesApres, image, imageSens = 'droite', fond, id } = Astro.props;
+const credit = image ? photo(image).credit : null;
+const corps = { paragraphes, liste, colonnes, paragraphesApres };
+---
+
+<Section fond={fond} id={id}>
+  {
+    image ? (
+      <div class:list={['split', 'reveal', imageSens === 'gauche' && 'split--media-left']}>
+        <div class="prose">
+          {surtitre && <p class="eyebrow">{surtitre}</p>}
+          {titre && <h2>{titre}</h2>}
+          <TexteCorps {...corps} />
+        </div>
+        <figure class="split-media">
+          <Photo nom={image} sizes="(max-width: 880px) 100vw, 50vw" />
+          {credit && <figcaption>{credit}</figcaption>}
+        </figure>
+      </div>
+    ) : titre ? (
+      <div class="text-layout reveal">
+        <div class="text-head">
+          {surtitre && <p class="eyebrow">{surtitre}</p>}
+          <h2>{titre}</h2>
+        </div>
+        <div class="prose">
+          <TexteCorps {...corps} />
+        </div>
+      </div>
+    ) : (
+      <div class="prose reveal">
+        {surtitre && <p class="eyebrow">{surtitre}</p>}
+        <TexteCorps {...corps} />
+      </div>
+    )
+  }
+</Section>

@@ -1,0 +1,42 @@
+{
+  "slug": "materiaux/zircone",
+  "titre": "Zircone",
+  "titreSeo": "Zircone ZrO₂ | Bernardaud Solutions Industrielles",
+  "description": "La zircone stabilisée se distingue par une ténacité et une résistance mécanique élevées. Applications : pompes et vannes, tribologie, coupe, capteurs, horlogerie, dentaire.",
+  "surtitre": "Matériaux",
+  "sousTitre": "Zircone ZrO₂",
+  "chapo": "La zircone stabilisée se distingue par une ténacité et une résistance mécanique élevées par rapport à de nombreuses autres céramiques d’oxydes.",
+  "blocs": [
+    {
+      "type": "texte",
+      "paragraphes": [
+        "Sa microstructure lui permet de limiter la propagation des fissures sous contrainte. Elle présente également une faible conductivité thermique et peut être utilisée pour des composants soumis à des sollicitations mécaniques importantes."
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Applications industrielles",
+      "liste": [
+        "Composants de pompes et de vannes",
+        "Pièces tribologiques et composants d’usure",
+        "Outils et éléments de coupe",
+        "Composants pour capteurs",
+        "Applications automobiles",
+        "Pièces horlogères",
+        "Applications dentaires et médicales selon les nuances"
+      ],
+      "colonnes": true
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "titre": "Voir aussi",
+      "cartes": [
+        { "titre": "ZTA", "texte": "Alumine renforcée à la zircone – Al₂O₃ + ZrO₂", "href": "/materiaux/zta/" },
+        { "titre": "Tous les matériaux", "href": "/materiaux/" }
+      ]
+    },
+    { "type": "cta", "titre": "Un composant en zircone ?", "bouton": { "libelle": "Contactez-nous", "href": "/contact/" } }
+  ]
+}

@@ -1,0 +1,61 @@
+---
+import { getImage } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Blocs from '../components/Blocs.astro';
+import Icon from '../components/Icon.astro';
+import Photo from '../components/Photo.astro';
+import { photo } from '../lib/images';
+import { lien, pageParSlug, site } from '../lib/site';
+
+const page = pageParSlug('');
+if (!page?.hero) throw new Error('src/content/fr/accueil.json doit contenir un bloc « hero ».');
+const { hero } = page;
+
+const logo = await getImage({ src: photo('logo-bsi').src, width: 512, format: 'png' });
+const { adresse, aConfirmer } = site.contact;
+
+// Données structurées pour les moteurs de recherche. L'adresse n'y figure qu'une fois confirmée.
+const organisation: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: site.nom,
+  alternateName: site.nomCourt,
+  url: site.url,
+  logo: new URL(logo.src, Astro.site).href,
+  description: page.description,
+};
+if (!aConfirmer) {
+  organisation.address = {
+    '@type': 'PostalAddress',
+    streetAddress: adresse[0],
+    postalCode: adresse[1].split(' ')[0],
+    addressLocality: adresse[1].split(' ').slice(1).join(' '),
+    addressCountry: 'FR',
+  };
+}
+---
+
+<Base titre={page.titreSeo ?? page.titre} description={page.description} jsonld={[organisation]}>
+  <section class="hero on-dark">
+    <div class="hero-media">
+      <Photo nom={hero.image} priorite sizes="100vw" decorative />
+    </div>
+    <div class="container">
+      <div class="hero-inner">
+        {hero.surtitre && <p class="eyebrow">{hero.surtitre}</p>}
+        <h1>{hero.titre}</h1>
+        <p class="hero-text">{hero.texte}</p>
+        <div class="hero-actions">
+          {
+            hero.boutons.map((bouton) => (
+              <a class:list={['btn', bouton.style === 'secondaire' ? 'btn-secondary' : 'btn-primary']} href={lien(bouton.href)}>
+                {bouton.libelle} <Icon nom="fleche" />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+  <Blocs blocs={page.blocs} />
+</Base>

@@ -1,0 +1,33 @@
+# Sortie de construction
+dist/
+.astro/
+
+# Dépendances
+node_modules/
+
+# Journaux
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Secrets et variables d'environnement (seul .env.example est versionné)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Préférences personnelles de l'agent de développement
+CLAUDE.local.md
+
+# Images brutes récupérées sur l'ancien site WordPress : elles ne sont pas toutes libres
+# de droits ni destinées à la publication. Seules les images retenues, optimisées par
+# scripts/images/prepare.mjs, sont versionnées (src/assets/photos).
+data-migration/
+
+# Éditeurs et systèmes
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db

@@ -1,0 +1,62 @@
+{
+  "nom": "Bernardaud Solutions Industrielles",
+  "nomCourt": "BSI",
+  "accroche": "Céramiques techniques, imprimerie sérigraphique, décoration et traitements de surface",
+  "url": "https://bernardaudsi.com",
+  "contact": {
+    "adresse": ["19 rue Pierre Bernardaud", "87000 Limoges", "France"],
+    "email": "contact@bernardaud.com",
+    "telephone": "+33 5 55 10 55 50",
+    "aConfirmer": true
+  },
+  "nav": [
+    {
+      "libelle": "Offre",
+      "href": "/offre/",
+      "enfants": [
+        { "libelle": "Céramiques techniques", "href": "/offre/ceramiques-techniques/" },
+        { "libelle": "Imprimerie sérigraphique", "href": "/offre/imprimerie-serigraphique/" },
+        { "libelle": "Décoration et traitements de surface", "href": "/offre/decoration-traitements-de-surface/" },
+        { "libelle": "Développements et services industriels", "href": "/offre/developpements-services-industriels/" }
+      ]
+    },
+    {
+      "libelle": "Matériaux",
+      "href": "/materiaux/",
+      "enfants": [
+        { "libelle": "Porcelaine technique", "href": "/materiaux/porcelaine-technique/" },
+        { "libelle": "Alumine de pureté intermédiaire", "href": "/materiaux/alumine-purete-intermediaire/" },
+        { "libelle": "Alumine haute pureté", "href": "/materiaux/alumine-haute-purete/" },
+        { "libelle": "ZTA", "href": "/materiaux/zta/" },
+        { "libelle": "Zircone", "href": "/materiaux/zircone/" }
+      ]
+    },
+    {
+      "libelle": "Marchés",
+      "href": "/marches/",
+      "enfants": [
+        { "libelle": "Défense", "href": "/marches/defense/" },
+        { "libelle": "Industrie", "href": "/marches/industrie/" },
+        { "libelle": "Horlogerie", "href": "/marches/horlogerie/" },
+        { "libelle": "Cosmétiques, parfums, vins et spiritueux", "href": "/marches/cosmetiques-parfums-vins-spiritueux/" },
+        { "libelle": "Architecture", "href": "/marches/architecture/" }
+      ]
+    },
+    { "libelle": "Outil industriel", "href": "/outil-industriel/" },
+    {
+      "libelle": "Entreprise",
+      "href": "/entreprise/",
+      "enfants": [
+        { "libelle": "Historique", "href": "/entreprise/historique/" },
+        { "libelle": "Actionnariat", "href": "/entreprise/actionnariat/" },
+        { "libelle": "Certifications et RSE", "href": "/entreprise/certifications/" },
+        { "libelle": "Partenaires", "href": "/entreprise/partenaires/" }
+      ]
+    }
+  ],
+  "legal": [
+    { "libelle": "Mentions légales", "href": "/mentions-legales/" },
+    { "libelle": "Confidentialité", "href": "/confidentialite/" },
+    { "libelle": "Plan du site", "href": "/plan-du-site/" }
+  ]
+}

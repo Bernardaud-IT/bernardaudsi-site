@@ -1,0 +1,97 @@
+{
+  "slug": "",
+  "titre": "Bernardaud Solutions Industrielles",
+  "titreSeo": "Bernardaud Solutions Industrielles : céramiques techniques",
+  "description": "Céramiques techniques, imprimerie sérigraphique, décoration et traitements de surface : du développement à la production en série, en Haute-Vienne.",
+  "hero": {
+    "surtitre": "Haute-Vienne, France",
+    "titre": "Bernardaud Solutions Industrielles",
+    "texte": "Bernardaud Solutions Industrielles réunit des expertises en céramiques techniques, imprimerie sérigraphique, décoration et traitements de surface, ainsi qu’un ensemble de technologies et de moyens industriels dédiés au développement, à l’industrialisation et à la production.",
+    "boutons": [
+      { "libelle": "Notre offre", "href": "/offre/", "style": "primaire" },
+      { "libelle": "Contactez-nous", "href": "/contact/", "style": "secondaire" }
+    ],
+    "image": "hero-injection"
+  },
+  "blocs": [
+    {
+      "type": "cartes",
+      "style": "piliers",
+      "id": "offre",
+      "titre": "Quatre expertises complémentaires",
+      "cartes": [
+        {
+          "titre": "Céramiques techniques",
+          "texte": "Développement et production de composants en céramiques techniques, sur catalogue ou sur mesure, de la petite à la grande série.",
+          "href": "/offre/ceramiques-techniques/",
+          "image": "composants-ceramiques"
+        },
+        {
+          "titre": "Imprimerie sérigraphique",
+          "texte": "Impression sérigraphique sur une grande diversité de supports, pour des applications industrielles et décoratives.",
+          "href": "/offre/imprimerie-serigraphique/",
+          "image": "serigraphie-impression"
+        },
+        {
+          "titre": "Décoration et traitements de surface",
+          "texte": "Solutions de décoration et de traitement de surface à finalité esthétique ou fonctionnelle.",
+          "href": "/offre/decoration-traitements-de-surface/",
+          "motif": true
+        },
+        {
+          "titre": "Développements et services industriels",
+          "texte": "Études, prototypage, ajout de fonctions, assemblage et opérations industrielles spécifiques, grâce à un outil industriel polyvalent.",
+          "href": "/offre/developpements-services-industriels/",
+          "image": "operateur-poste"
+        }
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "surtitre": "Bernardaud",
+      "titre": "Un groupe industriel français",
+      "paragraphes": [
+        "Depuis 1863, Bernardaud développe en Haute-Vienne un outil industriel diversifié, aujourd’hui réparti sur quatre sites de production. Le groupe réunit des compétences, des technologies et des moyens de production au service de marchés et d’applications variés, en France comme à l’international."
+      ],
+      "image": "site-aerien"
+    },
+    {
+      "type": "citation",
+      "texte": "Bernardaud Solutions Industrielles accompagne ses partenaires du développement à l’industrialisation et à la production en série. La diversité de nos compétences et de nos moyens nous permet de répondre à des besoins industriels très variés.",
+      "auteur": "Michel Bernardaud",
+      "fonction": "Président-directeur général",
+      "image": "michel-bernardaud"
+    },
+    {
+      "type": "chiffres",
+      "visible": false,
+      "titre": "Chiffres clés",
+      "items": [
+        { "valeur": "60 000 m²", "libelle": "de surfaces industrielles réparties sur 4 sites de production en Haute-Vienne, France" },
+        { "valeur": "750", "libelle": "collaborateurs" },
+        { "valeur": "75 %", "libelle": "des ventes à l’export" },
+        { "valeur": "ISO 9001 | ISO 14001", "libelle": "Sites certifiés" }
+      ]
+    },
+    {
+      "type": "cartes",
+      "style": "liens",
+      "fond": "alt",
+      "titre": "Nos marchés",
+      "cartes": [
+        { "titre": "Défense", "texte": "Céramiques balistiques haute performance", "href": "/marches/defense/" },
+        { "titre": "Industrie", "texte": "Céramiques techniques et traitements de surface pour l’industrie", "href": "/marches/industrie/" },
+        { "titre": "Horlogerie", "texte": "Des solutions d’impression et de décoration pour l’horlogerie", "href": "/marches/horlogerie/" },
+        { "titre": "Cosmétiques, parfums, vins et spiritueux", "texte": "Des contenants d’exception", "href": "/marches/cosmetiques-parfums-vins-spiritueux/" },
+        { "titre": "Architecture", "texte": "La porcelaine au service de l’architecture", "href": "/marches/architecture/" }
+      ]
+    },
+    {
+      "type": "cta",
+      "titre": "Parlons de votre projet",
+      "texte": "Du laboratoire à la production en série, nous intervenons à différents niveaux de maturité d’un projet.",
+      "bouton": { "libelle": "Contactez-nous", "href": "/contact/" }
+    }
+  ]
+}

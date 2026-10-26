@@ -1,0 +1,54 @@
+{
+  "slug": "offre",
+  "titre": "Offre",
+  "titreSeo": "Offre industrielle | Bernardaud Solutions Industrielles",
+  "description": "Quatre expertises complémentaires : céramiques techniques, imprimerie sérigraphique, décoration et traitements de surface, services industriels.",
+  "chapo": "Bernardaud Solutions Industrielles réunit quatre expertises complémentaires permettant d’accompagner des besoins allant du développement de composants à la mise en production, en passant par l’impression, la décoration, les traitements de surface et les développements industriels spécifiques.",
+  "image": "atelier-production",
+  "blocs": [
+    {
+      "type": "cartes",
+      "style": "piliers",
+      "cartes": [
+        {
+          "titre": "Céramiques techniques",
+          "texte": "Développement et production de composants en céramiques techniques, sur catalogue ou sur mesure, de la petite à la grande série.",
+          "href": "/offre/ceramiques-techniques/",
+          "image": "composants-ceramiques"
+        },
+        {
+          "titre": "Imprimerie sérigraphique",
+          "texte": "Conception et impression sérigraphique sur une grande diversité de supports, pour des applications industrielles et décoratives.",
+          "href": "/offre/imprimerie-serigraphique/",
+          "image": "serigraphie-impression"
+        },
+        {
+          "titre": "Décoration et traitements de surface",
+          "texte": "Solutions de décoration, revêtement et traitement de surface, pour répondre à des objectifs esthétiques ou fonctionnels.",
+          "href": "/offre/decoration-traitements-de-surface/",
+          "motif": true
+        },
+        {
+          "titre": "Développements et services industriels",
+          "texte": "Mobilisation de nos compétences et de notre outil industriel pour des besoins spécifiques : études, prototypage, ajout de fonctions, assemblage et opérations industrielles sur mesure.",
+          "href": "/offre/developpements-services-industriels/",
+          "image": "operateur-poste"
+        }
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "titre": "Du laboratoire à la production en série",
+      "paragraphes": [
+        "Grâce à un laboratoire intégré, un bureau d’études et des ateliers de prototypage, Bernardaud Solutions Industrielles peut intervenir à différents niveaux de maturité d’un projet, depuis les phases de R&D jusqu’à l’industrialisation et la production en grande série."
+      ],
+      "image": "caracterisation"
+    },
+    {
+      "type": "cta",
+      "titre": "Parlons de votre projet",
+      "bouton": { "libelle": "Contactez-nous", "href": "/contact/" }
+    }
+  ]
+}

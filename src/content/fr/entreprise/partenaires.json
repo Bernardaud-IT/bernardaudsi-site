@@ -1,0 +1,30 @@
+{
+  "slug": "entreprise/partenaires",
+  "titre": "Partenaires",
+  "titreSeo": "Partenaires scientifiques | Bernardaud Solutions Industrielles",
+  "description": "Implantée au sein du pôle européen de la céramique à Limoges, Bernardaud Solutions Industrielles collabore avec l’IRCER, le CTTC, le CITRA et le CEDREM.",
+  "surtitre": "Entreprise",
+  "sousTitre": "Un écosystème scientifique et technologique",
+  "chapo": "Implantée au sein du pôle européen de la céramique à Limoges, Bernardaud Solutions Industrielles s’appuie sur un environnement associant recherche, transfert de technologies et expertise industrielle.",
+  "blocs": [
+    {
+      "type": "groupes",
+      "titre": "Nos collaborations",
+      "intro": "BSI collabore notamment avec :",
+      "groupes": [
+        { "titre": "IRCER", "texte": "Institut de Recherche sur les Céramiques" },
+        { "titre": "CTTC", "texte": "Centre de Transfert de Technologies Céramiques" },
+        { "titre": "CITRA", "texte": "Spécialisé dans les traitements de surface" },
+        { "titre": "CEDREM" }
+      ]
+    },
+    {
+      "type": "texte",
+      "fond": "alt",
+      "paragraphes": [
+        "Ces collaborations permettent de mobiliser des compétences scientifiques et techniques complémentaires pour accompagner les phases de recherche, de caractérisation et de développement, notamment dans les domaines des céramiques techniques et des traitements de surface.",
+        "Elles viennent compléter les moyens internes de Bernardaud Solutions Industrielles lorsqu’un projet nécessite des expertises ou des équipements spécifiques."
+      ]
+    }
+  ]
+}
