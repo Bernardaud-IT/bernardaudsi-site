@@ -1,0 +1,71 @@
+# Aperçu de validation du site sur GitHub Pages : https://bernardaud-it.github.io/bernardaudsi-site/
+#
+# Lancement MANUEL seulement : onglet Actions > « Aperçu de validation » > Run workflow (branche main).
+# Rien n'est publié à chaque fusion : on choisit le moment.
+#
+# Le dépôt est public, donc cet aperçu l'est aussi : n'importe qui avec le lien le voit. Le mode aperçu
+# (PUBLIC_MODE_APERCU=1) demande aux moteurs de recherche de ne pas l'indexer (meta noindex dans chaque page) ;
+# ce n'est PAS une protection d'accès. Textes en cours de validation : voir docs/DEPLOIEMENT.md, option A.
+#
+# Prérequis (une fois, par Damien) : Settings > Pages > Source = « GitHub Actions ».
+# Les actions sont figées sur un commit précis (le numéro de version est en commentaire) : une version
+# modifiée après coup par son auteur ne s'exécute pas chez nous.
+name: Aperçu de validation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '^22.23.4' # Astro 7 exige Node 22.23.4 ou plus (package.json, engines)
+          cache: npm
+      - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
+      - run: npm ci
+      - name: Construire en mode aperçu
+        run: npm run build
+        env:
+          SITE_URL: https://bernardaud-it.github.io
+          SITE_BASE: /bernardaudsi-site/
+          PUBLIC_MODE_APERCU: '1'
+      - name: Contrôler le site (ressources externes, scripts en ligne, liens, SEO)
+        run: npm run verifier
+        env:
+          SITE_BASE: /bernardaudsi-site/
+      - name: Vérifier que chaque page est en noindex
+        run: |
+          pages_indexables="$(grep -rL 'content="noindex, nofollow"' dist --include='*.html' || true)"
+          if [ -n "$pages_indexables" ]; then
+            echo "Pages sans noindex (l'aperçu ne doit jamais être indexé) :"
+            echo "$pages_indexables"
+            exit 1
+          fi
+      - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        with:
+          path: dist
+
+  deployer:
+    needs: construire
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - id: deploiement
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5

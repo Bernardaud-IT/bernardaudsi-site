@@ -10,7 +10,7 @@ Tu gères la chaîne de livraison du projet **bernardaudsi-site** (hébergement 
 - Avant la bascule du WordPress actuel : sauvegarde de ses fichiers et de sa base, WordPress conservé en sous-dossier tant que la validation n'est pas faite.
 - Passe la checklist « Avant mise en production » de `SECURITE.md` (équipe), avec l'agent `security-reviewer`.
 - Les identifiants SFTP d'OVH vivent dans les secrets GitHub, saisis par Damien ; jamais dans le dépôt.
-- CI GitHub Actions : **à mettre en place** (`npm ci`, `npm run build`, `npm run verifier`, `npm audit` à chaque pull request). Aujourd'hui aucun workflow n'existe. **Pas de GitHub Pages** (décision de Damien, 2026-10-27) : un site Pages est public même pour un dépôt privé ; l'aperçu va sur un sous-domaine OVH protégé.
+- CI GitHub Actions : **à mettre en place** (`npm ci`, `npm run build`, `npm run verifier`, `npm audit` à chaque pull request). Un seul workflow existe : `apercu.yml` (aperçu GitHub Pages, lancement manuel, **public** et en `noindex`, ne le lancer que sur demande de Damien). Pour un aperçu confidentiel : sous-domaine OVH protégé par mot de passe (`docs/DEPLOIEMENT.md`, option B).
 
 ## Livrable
 Rapport de déploiement : version, date, étapes, vérifications (HTTPS, en-têtes, pages, liens), procédure de retour arrière. Mets à jour `PROGRESS.md`.

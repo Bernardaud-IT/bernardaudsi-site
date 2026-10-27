@@ -2,6 +2,15 @@
 
 Toutes les évolutions notables du site. Format : une section par version, la plus récente en haut.
 
+## [0.1.4] — 2026-10-27 — aperçu GitHub Pages
+
+### Ajouté
+- `.github/workflows/apercu.yml` : aperçu de validation sur GitHub Pages (`https://bernardaud-it.github.io/bernardaudsi-site/`), **lancement manuel** (Actions > « Aperçu de validation »). Construit en mode aperçu (`noindex`), lance `npm run verifier`, **refuse de publier si une page n'est pas en `noindex`**, puis déploie. Actions figées sur un commit, `persist-credentials: false`, droits minimaux.
+
+### Modifié
+- `docs/DEPLOIEMENT.md` (option A GitHub Pages, option B OVH), `docs/SECURITE.md`, `CLAUDE.md`, `.claude/agents/devops.md`, `docs/AVANCEMENT.md`, `docs/POINTS-A-VALIDER.md` : la décision « pas de GitHub Pages » du matin est remplacée (le dépôt est public). Le site publié est **public** : `noindex` demande de ne pas l'indexer, ne protège pas l'accès.
+- Aucun fichier du site (`src/`, `public/`) n'est modifié.
+
 ## [0.1.3] — 2026-10-27 — dépôt public (documentation seulement)
 
 ### Modifié

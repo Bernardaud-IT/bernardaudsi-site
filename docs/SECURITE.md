@@ -72,7 +72,7 @@ Le dépôt `Bernardaud-IT/bernardaudsi-site` est **public** depuis le 2026-10-27
 - Sans fichier de licence, tous les droits restent réservés à Bernardaud : public ne veut pas dire réutilisable.
 - Les **photos** de `src/assets/photos/` sont visibles et téléchargeables par tous. Leurs droits ne sont pas tous confirmés (B6, B8, B9 de `POINTS-A-VALIDER.md`). Retirer une photo d'un commit ne l'efface pas de l'historique : si une photo ne doit pas être publique, il faut le dire à Damien (réécriture d'historique ou nouveau dépôt).
 - Pas de protection technique de la branche `main` pour l'instant : la règle « branche + pull request, jamais de push direct » est une convention d'équipe.
-- Un site GitHub Pages reste exclu (voir `DEPLOIEMENT.md`) : l'aperçu de validation va sur un sous-domaine OVH protégé par mot de passe.
+- Un aperçu GitHub Pages est possible (workflow manuel `apercu.yml`, voir `DEPLOIEMENT.md`, option A) mais **public** et seulement en `noindex` : pas de contenu non validé sans l'accord de Damien. Pour un aperçu confidentiel : sous-domaine OVH protégé par mot de passe (option B).
 
 ## Ce qui est à surveiller côté Bernardaud
 

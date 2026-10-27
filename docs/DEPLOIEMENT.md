@@ -17,13 +17,22 @@ Le dossier `dist/` contient le site complet, `.htaccess` compris (fichier caché
 
 Un aperçu n'est **jamais indexé** (`PUBLIC_MODE_APERCU=1` ajoute `noindex` et un `robots.txt` qui interdit tout).
 
-### Pas de GitHub Pages
+### Option A : GitHub Pages (public, lancement manuel)
 
-Décision de Damien (2026-10-27) : l'aperçu de validation n'est **pas** publié sur GitHub Pages. Un site GitHub Pages est public même quand le dépôt est privé
-(sauf avec GitHub Enterprise Cloud) : il diffuserait des textes non validés, des brouillons et des photos dont les droits ne sont pas réglés
-(c'est déjà le cas de la version Codex sur `DTaillemaud/bernardaudsi-preview`). Le dépôt GitHub sert à versionner et à relire le code, pas à héberger. Depuis le 2026-10-27 le dépôt lui-même est public (voir `SECURITE.md`, « Dépôt GitHub public »).
+Le dépôt étant public depuis le 2026-10-27 (voir `SECURITE.md`, « Dépôt GitHub public »), Damien a choisi de publier l'aperçu sur GitHub Pages :
+`https://bernardaud-it.github.io/bernardaudsi-site/`. Un site GitHub Pages est de toute façon public, même pour un dépôt privé (sauf avec GitHub Enterprise Cloud).
 
-### Aperçu sur un sous-domaine OVH protégé par mot de passe
+- **Il est public** : toute personne qui a le lien le voit (textes en cours de validation, brouillons, photos aux droits non confirmés : point B12 de `POINTS-A-VALIDER.md`). Le mode aperçu ajoute `noindex, nofollow` à chaque page : cela demande aux moteurs de ne pas l'indexer, ce n'est **pas** une protection d'accès. Le `robots.txt` généré ne sert à rien ici : un moteur ne lit `robots.txt` qu'à la racine d'un domaine, qui est celle de `bernardaud-it.github.io`.
+- **Une seule fois (Damien)** : Settings > Pages > Source = « GitHub Actions ».
+- **Publier** : onglet Actions > « Aperçu de validation » > Run workflow, sur `main` (`.github/workflows/apercu.yml`). Le workflow construit le site en mode aperçu, lance `npm run verifier`, **refuse de publier si une seule page n'est pas en `noindex`**, puis déploie. Rien n'est publié à chaque fusion : on choisit le moment.
+- **Branche** : l'environnement `github-pages` n'accepte par défaut que la branche `main`, donc le workflow ne se lance qu'après la fusion de la PR qui l'ajoute.
+- **Retirer l'aperçu** : désactiver ou dépublier le site dans Settings > Pages. Une fois la page vue, son contenu a pu être copié.
+- **Limites** : GitHub ne lit pas `.htaccess` : les en-têtes de sécurité et la CSP ne s'appliquent pas sur Pages. Le site n'utilise aucun tiers, mais cet aperçu ne prouve rien sur la sécurité finale : pour cela, utiliser l'option B (OVH, même type d'hébergement que la production).
+- Les actions du workflow sont figées sur un commit précis (le numéro de version est en commentaire) ; les mettre à jour à la main, après relecture.
+
+### Option B : aperçu sur un sous-domaine OVH protégé par mot de passe
+
+Seule option vraiment confidentielle : à préférer tant que les textes, les photos ou la page Défense ne sont pas validés.
 
 1. Dans l'espace client OVH, créer un sous-domaine (par exemple `apercu.bernardaudsi.com`) pointant vers un dossier dédié.
 2. Y protéger l'accès par mot de passe (`.htpasswd` + `.htaccess`, ou l'outil de protection d'OVH) : **Damien crée le mot de passe**,
