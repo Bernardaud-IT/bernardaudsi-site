@@ -2,6 +2,14 @@
 
 Toutes les évolutions notables du site. Format : une section par version, la plus récente en haut.
 
+## [0.1.3] — 2026-10-27 — dépôt public (documentation seulement)
+
+### Modifié
+- Le dépôt GitHub est rendu **public** (décision de Damien) : secret scanning et push protection activés ; historique contrôlé, aucun secret.
+- Documentation corrigée en conséquence : `README.md` (section « Dépôt public : confidentialité et droits »), `CLAUDE.md`, `docs/SECURITE.md` (section « Dépôt GitHub public »), `docs/DEPLOIEMENT.md`, `docs/AVANCEMENT.md`.
+- Nouveau point `B12` dans `docs/POINTS-A-VALIDER.md` : droits des photos désormais visibles de tous.
+- Aucun fichier du site (`src/`, `public/`) n'est modifié.
+
 ## [0.1.2] — 2026-10-27 — premier dépôt GitHub
 
 ### Modifié

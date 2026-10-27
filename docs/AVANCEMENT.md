@@ -5,7 +5,7 @@
 **Dernière mise à jour** : 2026-10-27
 
 ## État
-Version de validation 0.1.2 poussée sur le dépôt privé (29 pages, contrôle automatique sans erreur) ; pas encore d'aperçu en ligne ni de mise en ligne.
+Version de validation 0.1.2 poussée sur le dépôt GitHub, **public depuis le 2026-10-27** (29 pages, contrôle automatique sans erreur) ; pas encore d'aperçu en ligne ni de mise en ligne.
 
 ## Fait
 - Projet Astro 7 statique, système de design Sora + Inter auto-hébergées (skill ui-ux-pro-max, copié dans `.claude/skills/`), menu accessible, version mobile.
@@ -13,9 +13,10 @@ Version de validation 0.1.2 poussée sur le dépôt privé (29 pages, contrôle 
 - Revue indépendante du 2026-10-26 : 0 point critique ; photos, `.htaccess`, menu, plan du site, SEO et documentation corrigés (voir CHANGELOG 0.1.1).
 - Aucun cookie, aucune ressource tierce ; `public/.htaccess` (CSP stricte, en-têtes, HTTPS) ; `npm run verifier`.
 - Documentation : README, ARCHITECTURE, CONTENUS, SECURITE, DEPLOIEMENT, POINTS-A-VALIDER.
-- Dépôt privé Bernardaud-IT/bernardaudsi-site créé et `main` poussé le 2026-10-27. Offre GitHub gratuite : ni protection de `main` ni secret scanning (alertes Dependabot actives) : plus de push direct sur `main`, branche et pull request.
+- Dépôt Bernardaud-IT/bernardaudsi-site créé privé et `main` poussé le 2026-10-27, puis **rendu public le même jour sur demande de Damien** (historique contrôlé : aucun secret). Secret scanning et push protection activés ; Dependabot actif ; pas de protection technique de `main` : plus de push direct, branche et pull request.
 
 ## Reste à faire
+0. **Droits des photos, dépôt public** : les 27 photos de `src/assets/photos/` sont visibles de tous. Décider avec Charles et Alice de garder celles dont le droit est confirmé et de retirer les autres (ou de repasser le dépôt en privé) : B6, B8, B9 de `docs/POINTS-A-VALIDER.md`.
 1. Aperçu de validation sur un sous-domaine OVH protégé par mot de passe (Damien le crée). **Pas de GitHub Pages** (public même pour un dépôt privé).
 2. Arbitrages de contenu (`docs/POINTS-A-VALIDER.md`) : chiffres clés, surfaces, cordiérite et C120, coordonnées, légal, droit à l'image.
 3. Plan OVH exact, essai des règles `.htaccess` sur l'hébergement, redirections des anciennes adresses, bascule.
@@ -26,3 +27,4 @@ Version de validation 0.1.2 poussée sur le dépôt privé (29 pages, contrôle 
 - 2026-10-26 — Chiffres clés masqués (`visible: false`) tant que Charles et Margaux n'ont pas tranché.
 - 2026-10-26 — Node 22.23.4 requis (Astro 7) : mis à jour sur le poste de Damien.
 - 2026-10-27 — Pas de GitHub Pages pour l'aperçu (décision de Damien) : un site Pages est public même pour un dépôt privé.
+- 2026-10-27 — Dépôt rendu public (décision de Damien) ; la documentation du dépôt est corrigée en conséquence (README, CLAUDE.md, SECURITE.md).

@@ -21,7 +21,7 @@ Un aperçu n'est **jamais indexé** (`PUBLIC_MODE_APERCU=1` ajoute `noindex` et 
 
 Décision de Damien (2026-10-27) : l'aperçu de validation n'est **pas** publié sur GitHub Pages. Un site GitHub Pages est public même quand le dépôt est privé
 (sauf avec GitHub Enterprise Cloud) : il diffuserait des textes non validés, des brouillons et des photos dont les droits ne sont pas réglés
-(c'est déjà le cas de la version Codex sur `DTaillemaud/bernardaudsi-preview`). Le dépôt GitHub sert à versionner et à relire le code, pas à héberger.
+(c'est déjà le cas de la version Codex sur `DTaillemaud/bernardaudsi-preview`). Le dépôt GitHub sert à versionner et à relire le code, pas à héberger. Depuis le 2026-10-27 le dépôt lui-même est public (voir `SECURITE.md`, « Dépôt GitHub public »).
 
 ### Aperçu sur un sous-domaine OVH protégé par mot de passe
 

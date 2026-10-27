@@ -33,6 +33,7 @@ Liste vivante : barrer ou supprimer une ligne quand elle est traitée. « Qui »
 | B9 | **Photos de la page Défense** (`casques-balistique`, `plaques-cuisson`) : pièces en céramique sur table de cuisson ; vérifier qu'elles ne sont pas des projets de clients (Charles : « virer toutes les photos de projets »). | `marches/defense.json` | Charles |
 | B10 | Légendes des archives (« 1890 », « 1963 ») : déduites des noms de fichiers et de la mention visible sur la photo de 1963 ; à confirmer. | `images.json` | Charles, Margaux |
 | B11 | Plus aucune photo de laboratoire, de bureau d'études ni de prototypage dans le site (les deux qui existaient ne montraient pas cela). La page « Du laboratoire à la production en série » est illustrée par des machines. | — | Yohann |
+| B12 | **Dépôt public et droits des photos** : depuis le 2026-10-27 le dépôt GitHub est public, donc les 27 photos de `src/assets/photos/` sont visibles et téléchargeables par tous alors que leurs droits ne sont pas tous confirmés (B6, B8, B9). Décider : garder public en ne conservant que les photos dont le droit est confirmé (le reste est retiré, avec réécriture de l'historique si nécessaire), ou repasser le dépôt en privé. | `src/assets/photos/`, `images.json` | Damien, Charles, Alice |
 
 ## C. Visuels à fournir (haute définition, droits réglés)
 

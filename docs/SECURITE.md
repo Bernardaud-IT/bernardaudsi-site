@@ -63,6 +63,17 @@ Le site ne collecte rien. Restent : les journaux techniques de l'hébergeur (adr
 de contact. La page Confidentialité est un **brouillon à compléter et à faire valider** (responsable du traitement, durées de
 conservation, contact RGPD).
 
+## Dépôt GitHub public
+
+Le dépôt `Bernardaud-IT/bernardaudsi-site` est **public** depuis le 2026-10-27 (décision de Damien). Conséquences :
+
+- Tout est lisible par n'importe qui, **y compris l'historique** : jamais de secret, de mail, de document source ni de coordonnée de personne dans un fichier commité. Les pièces sources (mails, Word, PowerPoint, `data-migration/`) restent hors Git (`.gitignore`).
+- GitHub **secret scanning** et **push protection** sont activés : un secret reconnu est signalé, et le push est bloqué. Dependabot surveille les dépendances. Ce n'est pas une garantie : la relecture reste la règle.
+- Sans fichier de licence, tous les droits restent réservés à Bernardaud : public ne veut pas dire réutilisable.
+- Les **photos** de `src/assets/photos/` sont visibles et téléchargeables par tous. Leurs droits ne sont pas tous confirmés (B6, B8, B9 de `POINTS-A-VALIDER.md`). Retirer une photo d'un commit ne l'efface pas de l'historique : si une photo ne doit pas être publique, il faut le dire à Damien (réécriture d'historique ou nouveau dépôt).
+- Pas de protection technique de la branche `main` pour l'instant : la règle « branche + pull request, jamais de push direct » est une convention d'équipe.
+- Un site GitHub Pages reste exclu (voir `DEPLOIEMENT.md`) : l'aperçu de validation va sur un sous-domaine OVH protégé par mot de passe.
+
 ## Ce qui est à surveiller côté Bernardaud
 
 - L'ancien site WordPress : tant qu'il est en ligne, il affiche la version de PHP (8.0, fin de vie), une API REST publique et aucun en-tête de sécurité. Le remplacer par ce site supprime ces risques.
