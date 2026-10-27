@@ -43,7 +43,6 @@ bernardaudsi-site/
 ├─ design-system/              système de design (ui-ux-pro-max) et ses adaptations
 ├─ docs/                       cette documentation
 ├─ .claude/agents/             agents de développement du projet
-├─ .github/workflows/          aperçu de validation (lancement manuel)
 └─ data-migration/             originaux de l'ancien site (HORS GIT)
 ```
 

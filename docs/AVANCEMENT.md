@@ -16,7 +16,7 @@ Version de validation 0.1.0 construite et testée en local (29 pages, contrôle 
 
 ## Reste à faire
 1. Dépôt privé Bernardaud-IT/bernardaudsi-site et premier push (confirmation de Damien).
-2. Aperçu de validation (GitHub Pages si l'offre le permet, sinon sous-domaine OVH protégé).
+2. Aperçu de validation sur un sous-domaine OVH protégé par mot de passe (Damien le crée). **Pas de GitHub Pages** (public même pour un dépôt privé).
 3. Arbitrages de contenu (`docs/POINTS-A-VALIDER.md`) : chiffres clés, surfaces, cordiérite et C120, coordonnées, légal.
 4. Plan OVH exact, essai des règles `.htaccess` sur l'hébergement, bascule.
 5. Anglais, formulaire de contact, back-office : après la première mise en ligne.

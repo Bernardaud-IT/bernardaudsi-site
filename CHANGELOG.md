@@ -2,6 +2,12 @@
 
 Toutes les évolutions notables du site. Format : une section par version, la plus récente en haut.
 
+## [0.1.2] — 2026-10-27 — premier dépôt GitHub
+
+### Modifié
+- Retrait du workflow GitHub Pages (`apercu.yml`) : décision de Damien, un site Pages est public même pour un dépôt privé. L'aperçu de
+  validation se fait sur un sous-domaine OVH protégé par mot de passe (`docs/DEPLOIEMENT.md`).
+
 ## [0.1.1] — 2026-10-26 — corrections après revue indépendante
 
 Une relecture indépendante (sécurité, fidélité au texte de Margaux, accessibilité, référencement) a conduit à :

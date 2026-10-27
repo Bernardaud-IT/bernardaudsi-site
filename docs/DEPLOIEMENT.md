@@ -17,23 +17,13 @@ Le dossier `dist/` contient le site complet, `.htaccess` compris (fichier caché
 
 Un aperçu n'est **jamais indexé** (`PUBLIC_MODE_APERCU=1` ajoute `noindex` et un `robots.txt` qui interdit tout).
 
-### Option A : GitHub Pages (workflow `.github/workflows/apercu.yml`, lancement manuel) : déconseillée pour ce contenu
+### Pas de GitHub Pages
 
-- **Attention : le dépôt peut être privé, mais le site GitHub Pages est public**, accessible à toute personne qui connaît l'adresse,
-  sauf avec GitHub Enterprise Cloud (seule offre qui permet de restreindre l'accès à un site Pages privé). Un aperçu de validation en
-  ligne diffuserait donc des textes non validés, des brouillons et des photos dont les droits ne sont pas réglés (c'est déjà le cas
-  de la version Codex sur `DTaillemaud/bernardaudsi-preview`). **À vérifier pour l'organisation Bernardaud-IT** avant tout usage ; sinon
-  utiliser l'option B.
-- Le site est alors à `https://<organisation>.github.io/bernardaudsi-site/` : variables `SITE_URL=https://bernardaud-it.github.io`
-  et `SITE_BASE=/bernardaudsi-site/` (déjà dans le workflow).
-- Lancer : onglet *Actions* du dépôt, « Aperçu de validation », *Run workflow*. Le workflow n'est pas encore testé sur GitHub ;
-  la construction en sous-dossier, elle, a été essayée en local (29 pages, contrôle sans erreur, `noindex`, `robots.txt` qui interdit tout).
-- Pour reproduire l'aperçu en local depuis **Git Bash** sous Windows, ajouter `MSYS_NO_PATHCONV=1` devant la commande : sans cela Git Bash
-  transforme `/bernardaudsi-site/` en chemin Windows. PowerShell et GitHub Actions n'ont pas ce problème.
-- Une page GitHub Pages d'un dépôt privé reste accessible à toute personne qui a l'adresse si l'offre ne permet pas de la restreindre :
-  vérifier les réglages d'accès avant de partager le lien.
+Décision de Damien (2026-10-27) : l'aperçu de validation n'est **pas** publié sur GitHub Pages. Un site GitHub Pages est public même quand le dépôt est privé
+(sauf avec GitHub Enterprise Cloud) : il diffuserait des textes non validés, des brouillons et des photos dont les droits ne sont pas réglés
+(c'est déjà le cas de la version Codex sur `DTaillemaud/bernardaudsi-preview`). Le dépôt GitHub sert à versionner et à relire le code, pas à héberger.
 
-### Option B : sous-domaine OVH protégé par mot de passe (recommandé)
+### Aperçu sur un sous-domaine OVH protégé par mot de passe
 
 1. Dans l'espace client OVH, créer un sous-domaine (par exemple `apercu.bernardaudsi.com`) pointant vers un dossier dédié.
 2. Y protéger l'accès par mot de passe (`.htpasswd` + `.htaccess`, ou l'outil de protection d'OVH) : **Damien crée le mot de passe**,
@@ -41,6 +31,8 @@ Un aperçu n'est **jamais indexé** (`PUBLIC_MODE_APERCU=1` ajoute `noindex` et 
 3. Construire : `PUBLIC_MODE_APERCU=1 SITE_URL=https://apercu.bernardaudsi.com npm run build` (PowerShell :
    `$env:PUBLIC_MODE_APERCU='1'; $env:SITE_URL='https://apercu.bernardaudsi.com'; npm run build`).
 4. Déposer le contenu de `dist/` dans le dossier du sous-domaine.
+
+Le site peut aussi être déposé dans un sous-dossier d'un domaine existant : ajouter `SITE_BASE=/apercu/` à la construction (le contrôle `npm run verifier` doit alors recevoir la même variable). Depuis **Git Bash** sous Windows, préfixer la commande par `MSYS_NO_PATHCONV=1` : sans cela Git Bash transforme `/apercu/` en chemin Windows. PowerShell n'a pas ce problème. Cette construction en sous-dossier a été essayée en local : 29 pages, contrôle sans erreur, `noindex`, `robots.txt` qui interdit tout.
 
 ## 3. Mise en ligne sur OVH Web Cloud
 

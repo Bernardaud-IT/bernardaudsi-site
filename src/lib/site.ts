@@ -50,7 +50,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 /**
  * Préfixe un lien interne par le dossier de publication. Sur bernardaudsi.com le site est à la racine
- * (aucun préfixe) ; l'aperçu GitHub Pages est dans un sous-dossier (SITE_BASE). Les liens externes,
+ * (aucun préfixe) ; un aperçu déposé dans un sous-dossier d'un domaine utilise SITE_BASE. Les liens externes,
  * mailto:, tel: et ancres sont laissés tels quels.
  */
 export function lien(href: string): string {

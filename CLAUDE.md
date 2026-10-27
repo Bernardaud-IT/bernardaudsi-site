@@ -60,7 +60,7 @@ Projet interne du service informatique de **Bernardaud** (manufacture de porcela
 - `public/.htaccess` : en-têtes de sécurité et redirections ; tout changement passe par `security-reviewer`.
 - `src/content/site.json` (coordonnées à confirmer) et les pages légales `mentions-legales.json` et `confidentialite.json` (texte juridique à faire valider).
 - `src/content/images.json` : droits et crédits des photos.
-- `.github/workflows/` : déploiement ; les identifiants d'hébergement sont dans les secrets GitHub (jamais dans le dépôt).
+- Aucun workflow GitHub pour l'instant, et **pas de GitHub Pages** (public même pour un dépôt privé ; décision de Damien du 2026-10-27). Si un déploiement automatique est un jour ajouté, les identifiants d'hébergement vont dans les secrets GitHub (jamais dans le dépôt) et le workflow passe par `security-reviewer`.
 
 ## Agents du projet
 Voir `.claude/agents/` : `frontend-dev`, `security-reviewer`, `doc-writer`, `devops` (déploiement, sur demande explicite seulement).

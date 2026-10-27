@@ -9,7 +9,7 @@ import sitemap from '@astrojs/sitemap';
 //
 // Variables d'environnement facultatives, utilisées seulement pour les aperçus de validation :
 //   SITE_URL  adresse publique de l'aperçu (par défaut : https://bernardaudsi.com)
-//   SITE_BASE dossier de publication (par défaut : /, ex. /bernardaudsi-site/ sur GitHub Pages)
+//   SITE_BASE dossier de publication (par défaut : /, ex. /apercu/ si l'aperçu est dans un sous-dossier)
 //   PUBLIC_MODE_APERCU=1  interdit l'indexation (meta robots et robots.txt)
 
 /** Adresses des pages marquées « brouillon » dans src/content/fr : elles sont en noindex, donc absentes du plan du site. */
