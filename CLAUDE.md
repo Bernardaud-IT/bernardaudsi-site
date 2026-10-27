@@ -9,12 +9,12 @@ Tu es l'agent de développement du projet **bernardaudsi-site**. Réponds en fra
 **Dès le premier message** de la conversation, lis `docs/AVANCEMENT.md` et regarde l'état Git (branche, modifications en cours). Si l'utilisateur dit bonjour ou reprend le travail, résume en 3 lignes où en est le projet et demande ce qu'on fait.
 
 ## Contexte
-Projet interne du service informatique de **Bernardaud** (manufacture de porcelaine de Limoges). Le site est la vitrine de **Bernardaud Solutions Industrielles (BSI)** : acheteurs et bureaux d'études industriels. Les données de l'entreprise et de ses clients sont confidentielles : dépôt privé, RGPD, aucun secret. En cas de doute sur un besoin métier, demande à l'utilisateur.
+Projet interne du service informatique de **Bernardaud** (manufacture de porcelaine de Limoges). Le site est la vitrine de **Bernardaud Solutions Industrielles (BSI)** : acheteurs et bureaux d'études industriels. Les données de l'entreprise et de ses clients sont confidentielles. **Le dépôt est PUBLIC** (décision de Damien, 2026-10-27) : rien d'interne dedans, RGPD, aucun secret. En cas de doute sur un besoin métier, demande à l'utilisateur.
 
 ## Le projet
 - Objectif : refaire `bernardaudsi.com` (aujourd'hui WordPress) en site industriel sobre, rapide et sûr, en ligne avant Noël 2026.
 - Stack : front Astro 7 (statique), TypeScript, CSS maison — back aucun — base de données aucune — hébergement OVH Web Cloud (fichiers statiques + `.htaccess`).
-- Dépôt GitHub (privé) : Bernardaud-IT/bernardaudsi-site (à créer).
+- Dépôt GitHub (**public**, secret scanning et push protection actifs) : Bernardaud-IT/bernardaudsi-site.
 - Environnements : local, puis aperçu de validation, puis production OVH. Aucun déploiement sans accord explicite de Damien (voir `docs/DEPLOIEMENT.md`).
 
 ## Commandes
@@ -31,7 +31,7 @@ Projet interne du service informatique de **Bernardaud** (manufacture de porcela
 - **Zéro tiers** : aucun script, police, image, carte, vidéo ou statistique venant d'un autre site ; aucun cookie ni stockage local. `npm run verifier` doit rester vert.
 - **Aucun style ni script en ligne** (la CSP de `public/.htaccess` les interdit) : pas d'attribut `style`, pas d'`onclick`, pas de `<script>` sans `src` (hors JSON-LD).
 - **Design** : utiliser la compétence `ui-ux-pro-max` et `design-system/bsi-vitrine/MASTER.md` (adaptations en tête de fichier). Accessibilité WCAG AA, mobile d'abord, `prefers-reduced-motion` respecté.
-- **Images** : ajoutées par `src/content/images.json` + `npm run images`, avec texte alternatif et crédit si connu. Droits à vérifier ; `data-migration/` est hors Git.
+- **Images** : ajoutées par `src/content/images.json` + `npm run images`, avec texte alternatif et crédit si connu. **Le dépôt est public : une photo commitée est visible de tous et reste dans l'historique.** Droits à vérifier AVANT de la commiter ; sans droit confirmé, ne la commite pas (la signaler dans `docs/POINTS-A-VALIDER.md`). `data-migration/` est hors Git.
 
 ## Règles de code (équipe)
 - Lisible avant d'être malin : fonctions courtes, une responsabilité, noms explicites, pas de code mort ni de code commenté.
@@ -42,13 +42,13 @@ Projet interne du service informatique de **Bernardaud** (manufacture de porcela
 - Pas de nouvelle dépendance sans besoin réel.
 
 ## Sécurité (équipe)
-- **Aucun secret** (mot de passe, token, clé) dans le code, les logs, les `.md` ou l'historique Git. Un secret exposé est révoqué.
+- **Aucun secret** (mot de passe, token, clé) dans le code, les logs, les `.md` ou l'historique Git. Un secret exposé est révoqué. Dépôt public : pas non plus de mail, de document interne ni de coordonnée de personne (les pièces sources restent hors Git).
 - Entrées validées, sorties échappées. Futur formulaire de contact : validation côté serveur, anti-spam, secrets hors du dossier web, revue sécurité dédiée.
 - En-têtes de sécurité dans `public/.htaccess`. Dépendances à jour, versions verrouillées (`npm audit` à chaque mise à jour).
 - Avant toute mise en ligne : revue sécurité (agent `security-reviewer`), sauvegarde de l'ancien site vérifiée, retour arrière écrit.
 
 ## Git (équipe)
-- `main` est protégée : jamais de push direct. Branches `feature/...` ou `fix/...`, pull request pour tout changement.
+- `main` : jamais de push direct (règle d'équipe ; GitHub ne l'impose pas techniquement pour l'instant). Branches `feature/...` ou `fix/...`, pull request pour tout changement.
 - Commits courts au format `type: résumé` (`feat`, `fix`, `docs`, `refactor`, `test`, `chore`).
 - **Demande confirmation avant** : push, merge, suppression de branche ou de dépôt, réécriture d'historique, déploiement.
 

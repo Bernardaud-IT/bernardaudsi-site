@@ -39,8 +39,17 @@ Aucun code à toucher : voir [docs/CONTENUS.md](docs/CONTENUS.md).
 | [design-system/bsi-vitrine/MASTER.md](design-system/bsi-vitrine/MASTER.md) | système de design |
 | [CHANGELOG.md](CHANGELOG.md) | historique des évolutions |
 
-## Droits des images
+## Dépôt public : confidentialité et droits
 
-Les photos viennent de l'ancien site et des ressources fournies par Bernardaud. Elles ne sont pas déclarées libres de droits :
-le dépôt est **privé** et reste interne. Les crédits (par exemple « © Odieux Boby / Bernardaud ») sont dans
-`src/content/images.json` et s'affichent dans les mentions légales.
+Ce dépôt est **public** depuis le 2026-10-27 (décision de Damien) : tout ce qu'il contient, y compris l'historique, est lisible par
+n'importe qui. N'y mettre ni secret, ni document interne, ni donnée de client ou de salarié (voir
+[docs/SECURITE.md](docs/SECURITE.md)).
+
+- **Aucune licence** : sans fichier de licence, tous les droits restent réservés à Bernardaud. Le dépôt est visible, il n'est pas
+  réutilisable librement.
+- **Photos** : elles viennent de l'ancien site et des ressources fournies par Bernardaud (`src/assets/photos/`). Elles **ne sont pas
+  déclarées libres de droits** et sont visibles de tous dans ce dépôt. Plusieurs points restent à valider : droit à l'image des
+  salariés, photos de la page Défense, crédits manquants (B6, B8, B9 de [docs/POINTS-A-VALIDER.md](docs/POINTS-A-VALIDER.md)).
+  Une photo dont le droit n'est pas confirmé doit être retirée du dépôt, pas seulement du site (la retirer d'un commit ne l'efface
+  pas de l'historique Git : prévenir Damien).
+- Les crédits (par exemple « © Odieux Boby / Bernardaud ») sont dans `src/content/images.json` et s'affichent dans les mentions légales.
